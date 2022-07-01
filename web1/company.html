@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./image/NC.png">
+    <link rel="apple-touch-icon" href="./image/NC.png">
+    <!-- 검색(메타) 정보 -->
+    <meta name="url" content="https://127.0.0.1:5500/web1/index.html">
+    <meta name="title" content="NCsoft">
+    <meta name="description" content="NCsoft의 WHO WE ARE, WHAT WE CREAT, MEDIA CENTER">
+    <meta name="keywords" content="NCsoft, NC, 엔씨, 엔씨소프트">
+    <!-- 오픈 그래프(공통,OG) -->
+    <meta property="og:url" content="https://127.0.0.1:5500/web1/index.html">
+    <meta property="og:title" content="NCsoft">
+    <meta property="og:description" content="NCsoft의 WHO WE ARE, WHAT WE CREAT, MEDIA CENTER,
+    INVESTORS, CAREERS">
+    <meta property="og:image" content="./image/NC.png">
+    <title>NCSOFT</title>
+
+    <!-- 기본 플러그인 -->
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <!-- 웹 폰트/폰트 모듈 연결 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap" rel="stylesheet">
+
+
+    <style>
+        @font-face {
+            font-family: 'Noto Sans KR', sans-serif;
+            src : url(https://fonts.google.com/noto/specimen/Noto+Sans+KR?subset=korean);
+            font-weight : normal;
+            font-style : normal;
+        }
+        @font-face {
+            font-family: 'Noto Sans KR4', sans-serif;
+            src: url(https://fonts.google.com/noto/specimen/Noto+Sans+KR?subset=korean);
+            font-weight: normal;
+            font-style : normal;
+        }
+
+        #language { font-size: 14px; font-family: 'Noto Sans KR', sans-serif;}
+    </style>
+
+    <!-- 웹 아이콘 연결 -->
+    <!-- XEIcon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <!-- 스타일 초기화 모듈 연결 -->
+    <link rel="stylesheet" href="./css/normal.css">
+    <link rel="stylesheet" href="sub_common.css">
+    <link rel="stylesheet" href="common.css">
+
+    <style>
+    #page1 .page_wrap { background-color: #fff; }
+    #page2 .page_wrap { background-color:#fff;}
+    #page3 .page_wrap { background-color:#fff; }
+    #page4 .page_wrap { background-color: #fff; }
+    
+    #page2.page { padding-bottom: 150px;}
+
+    #page2 .tit_box { text-align:right; }    
+    .sec_tit { font-size: 42px;    font-weight: 700;    line-height: 1.64;
+    letter-spacing: -0.03em; padding-top: 2em; padding-bottom: 1em; }
+    .tb1 { display:table; width: 100%; border-collapse: collapse; margin-bottom: 28px; }
+    .tb1 tr { display:table-row; }
+    .tb1 td, .tb1 th { display:table-cell; border-bottom:1px solid #666; 
+    line-height: 3.6; }
+    .tb1 tr:first-child th, .tb1 tr:first-child td { border-top:1px solid #666; }
+    .tb1 th { background-color: #f6f5f4; width: 200px; font-weight:600; color:#222; }
+    .tb1 td { color:#666; font-weight: 400; padding-left: 2em; }
+    .para1 { padding-top: 2em; padding-bottom: 1em;  line-height: 2; font-size:18px; }
+    .para2 { padding-top: 2em; padding-bottom: 1em;  line-height: 2; font-size:18px; 
+    font-weight: 700; }
+
+
+    #hd {  position:fixed; top: 0; left: 0; height:100px; z-index:999;
+    background-color: rgba(255,255,255,255);   }   
+    .page { clear:both; min-height:100vh; display:none; width: 100%; }
+    .sub_ban { clear:both; width: 100%; position:relative; }
+    .sub_ban img { display:block; width: 100%; height:auto; }
+    .tit_box { position:absolute; top:0px; left: 0px; z-index:30; padding-top: 150px; 
+    padding-left: 100px; color:#fff; text-shadow:1px 1px 1px #333;}
+    .sub_tit { font-size:48px; }
+    .sub_com { font-size:20px; padding-top: 40px; }
+    #page1 .tit_box, #page4 .tit_box { color:#fff; text-shadow:1px 1px 1px #333;}
+    .bread_box { clear: both; width: 100%; height: 48px; border-bottom:3px solid #f1f1f1; }
+    .bread_wrap { width: 1280px; margin: 0 auto; }
+    .bread { height: 48px; line-height: 48px;  }
+    .bread li { float:left; padding-right: 30px; }
+    .bread li:after { content:">"; padding-left: 24px; }
+    .bread li:last-child::after { content: ""; }
+    .page:target { display:block; }
+    .page_con { clear:both; width: 100%; }
+    .page_wrap { width: 1280px; margin: 0 auto; min-height:50vh; }
+
+    .nae { line-height: 1.8em; padding-bottom: 60px; padding-left: 50px;}
+    .esg {padding-top: 100px; padding-bottom: 015px; padding-left: 50px;}
+    .gachi { width: 100%; padding-top: 100px; padding-bottom: 120px;}
+
+    .pro_lst { clear:both; width: 1280px; padding-bottom: 60px;  }
+    .pro_lst li { width: 640px; float: left; padding: 3.6em; min-height: 520px;
+        box-sizing: border-box; overflow-x: hidden; } 
+    .pro_lst li h2 { line-height: 1.5em; padding-top: 50px; }
+    .pro_lst li p { margin-top: 30px; line-height: 2.0em;}
+    .pro_lst li img { display: block; float: left; max-width: 100%; }
+    .pro_lst .li1 { width: 640px; float: right; padding: 3.6em; min-height: 520px;
+        box-sizing: border-box; overflow-x: hidden; } 
+    .pro_lst .jisok2 { width: 640px; float: right; padding: 3.6em; min-height: 520px;
+        box-sizing: border-box; overflow-x: hidden; } 
+    
+        
+    .gil li { width: 640px; float: left; padding: 1.6em; min-height: 520px;
+    box-sizing: border-box; overflow-x: hidden; } 
+    .gil img{ float:left; width: 70%; padding-left: 90px;}
+    .gil .gil2 { width: 640px; float: right; padding: 1.6em; min-height: 520px;
+        box-sizing: border-box; overflow-x: hidden; }
+    .gil li p { padding-bottom: 20px; text-align: center;}
+    
+    .page_wrap2 { width: 1500px; margin: 0 auto; min-height:50vh; }
+    .jemok { font-size: 45px; padding-top: 150px; }
+    .page_wrap_small { float: left; padding: 2.2em;}
+    .page_wrap_small h3 { font-size: 24px; padding ; }
+    .small { font-size: 14x; line-height: 5.0em; color:#4682b4}
+    .page_wrap_small p { line-height: 2.0em;}
+
+    
+
+    </style>
+
+</head>
+
+
+
+
+<body>   
+    <div class="wrap">
+        <header id="hd">
+            <div class="hd_wrap">
+                <a href="index.html" class="logo">
+                    <img src="./image/NC.png" alt="NCSOFT">
+                </a>
+                <nav id="gnb">
+                    <ul>
+                        <li>
+                            <span>WHO WE ARE</span>
+                            <ul class="sub">
+                                <li><a href="company.html#page1">기업 소개</a></li>
+                                <li><a href="company.html#page2">걸어온 길</a></li>
+                                <li><a href="company.html#page3">가치와 목표</a></li>
+                                <li><a href="company.html#page4">지속가능경영</a></li>
+                                <li><a href="company.html#page5">NC 21 MOMENTS</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>WHAT WE CREAT</span>
+                            <ul class="sub">
+                                <li><a href="create.html#page1">리니지</a></li>
+                                <li><a href="create.html#page2">리니지2</a></li>
+                                <li><a href="create.html#page3">아이온</a></li>
+                                <li><a href="create.html#page4">블레이드 & 소울</a></li>
+                                <li><a href="create.html#page5">블레이드 & 소울2</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>MEDIA CENTER</span>
+                            <ul class="sub">
+                                <li><a href="media.html#page1">뉴스</a></li>
+                                <li><a href="media.html#page2">미디어 행사</a></li>
+                                <li><a href="media.html#page3">스토리</a></li>
+                                <li><a href="media.html#page4">멀티미디어</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>INVESTORS</span>
+                            <ul class="sub">
+                                <li><a href="investors.html#page1">기업지배구조</a></li>
+                                <li><a href="investors.html#page2">재무 정보</a></li>
+                                <li><a href="investors.html#page3">공시 정보</a></li>
+                                <li><a href="investors.html#page4">주가 정보</a></li>
+                                <li><a href="investors.html#page5">IR 자료</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>CAREERS</span>
+                            <ul class="sub">
+                                <li><a href="careers.html#page1">공고 보기</a></li>
+                                <li><a href="careers.html#page2">지원 안내</a></li>
+                                <li><a href="careers.html#page3">인사 제도</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                
+                
+                <p id="language">
+                   <a href="">KR</a>
+                   <a href="">EN</a>
+                   <a href="">CN</a>
+                   <a href="">JP</a>
+                </p>
+            </div>
+        </header>
+        
+
+        <div class="content">
+            <div id="content_wrap">
+                <section class="page" id="page1">
+                    <figure class="sub_ban">
+                        <img src="./image/ncbuilding.jpg" alt="기업 소개">
+                        <div class="tit_box">
+                            <h2 class="sub_tit">기업 소개</h2>
+                            <p class="sub_com">즐거움으로 연결된
+                                새로운 세상, 엔씨소프트<br>
+                                세상 모두가 즐거움으로 연결되는 새로운 미래,<br>
+                                아무도 가보지 못한 그 세상이 감동으로 가득 찰 때까지<br>
+                                엔씨는 끊임없이 꿈꾸며 도전을 멈추지 않을 것입니다.</p>
+                        </div>
+                    </figure>
+                    <div class="bread_box">
+                        <div class="bread_wrap">
+                            <ul class="bread">
+                                <li class="item1">
+                                    <a href="index" class="home">HOME</a>
+                                </li>
+                                <li class="item2">WHO WE ARE</li>
+                                <li class="item3">
+                                    <select name="sel" id="sel1" class="sel">
+                                        <option value="company.html#page1" selected>기업 소개</option>
+                                        <option value="company.html#page2" >걸어온 길</option>
+                                        <option value="company.html#page3" >가치와 목표</option>
+                                        <option value="company.html#page4" >지속가능경영</option>
+                                        <option value="company.html#page5" >NC 21 MOMENTS</option>
+                                    </select>
+                                </li>    
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="page_con">
+                        <div class="page_wrap">
+                            <h2 class="sec_tit">기업 소개</h2>
+                            <table class="tb1">
+                                <tbody>
+                                    <tr>
+                                        <th>기업명</th>
+                                        <td>NCSOFT</td>
+                                        <th>대표이사</th>
+                                        <td>김택진</td>
+                                    </tr>
+                                    <tr>
+                                        <th>설립일</th>
+                                        <td>1997.03.11</td>
+                                        <th>업종</th>
+                                        <td>문화 컨텐츠</td>
+                                    </tr>
+                                    <tr>
+                                        <th>본사소재</th>
+                                        <td>경기도 성남시 분당구 대왕판교로 644번길 12 (우)13494</td>
+                                        <th></th>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="page_wrap">
+                            <h2 class="sec_tit">CEO'S MESSAGE</h2>
+                            <p class="para2">엔씨는 즐거움의 미래를 열기 위해 새로운 세계를 상상하고</p>
+                            <p class="para1">기술의 혁신을 거듭하며 오직 엔씨만이 갈 수 있는 길에 집중했습니다.</p>
+                            <p class="para1">세상 모든 이들이 즐거움으로 연결될 때까지 끊임없이 도전하고 꿈꾸겠습니다.</p>                                
+                            <p class="para1">CEO/CCO 김택진</p>
+                        </div>
+                        <div class="page_wrap">
+
+                        </div>
+                    </div>
+                </section>
+                <section class="page" id="page2">
+                    <figure class="sub_ban">
+                        <img src="./image/elgacia.jpg" alt="걸어온 길">
+                        <div class="tit_box">
+                            <h2 class="sub_tit">걸어온 길</h2>
+                            <p class="sub_com">경계를 넘어서<br>
+                                BEYOND<br>BORDERS<br></p>
+                        </div>
+                    </figure>
+                    <div class="bread_box">
+                        <div class="bread_wrap">
+                            <ul class="bread">
+                                <li class="item1">
+                                    <a href="index" class="home">HOME</a>
+                                </li>
+                                <li class="item2">WHO WE ARE</li>
+                                <li class="item3">
+                                    <select name="sel" id="sel2" class="sel">
+                                        <option value="company.html#page1" >기업 소개</option>
+                                        <option value="company.html#page2" selected>걸어온 길</option>
+                                        <option value="company.html#page3" >가치와 목표</option>
+                                        <option value="company.html#page4" >지속가능경영</option>
+                                        <option value="company.html#page5" >NC 21 MOMENTS</option>
+                                    </select>
+                                </li>    
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="page_con">
+                        <div class="page_wrap">
+                            <ul class="gil">
+                                <li>
+                                    <img src="./image/2021.png" alt="2021">
+                                </li>
+                                <li>
+                                    <p>리니지W 출시</p>
+                                    <p>블레이드 & 소울2 출시</p>
+                                    <p>엔씨소프트, 첫 지속가능경영보고서 'NC ESG PLAYBOOK'발간</p>
+                                    <p>트릭스터M 출시</p>
+                                    <p>AI 야구 앱 페이지(PAIGE), iF 디자인 어워드 본상 수상</p>
+                                    <p>프로야구 H3 출시</p>
+                                    <p>ESG 경영위원회 신설</p>
+                                    <p>사내 어린이집 소개한'웃는땅콩 이야기'출간</p>
+                                    <p>케이팝 엔터 플랫폼 유니버스 출시</p>
+                                    <p>캐릭터 브랜드 도구리 출시</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="page_wrap">
+                            <ul class="gil">
+                                <li class="gil2">
+                                    <img src="./image/2020.png" alt="2020">
+                                </li>
+                                <li>
+                                    <p>엔씨소프트서비스, 2020 올해의 편한 일터 고용노동부 장관상 수상</p>
+                                    <p>엔씨(NC), ‘오픈체인 프로젝트’ 표준 준수 국제 인증 획득</p>
+                                    <p>엔씨소프트 웹사이트, 웹어워드코리아 2020 게임분야 대상 수상</p>
+                                    <p>2020 잇어워드 브랜드아이덴티티 부문 대상 수상 / it Award Design Leader's Choice 2020</p>
+                                    <p>엔씨소프트 웹사이트, 2020 GDWEB DESIGN AWARDS IT기업 부문 GRAND PRIZE 수상</p>
+                                    <p>엔씨소프트, 제6회 2020 올해의 SNS 올해의 블로그 기업부문 대상 수상</p>
+                                    <p>아이온 클래식 출시</p>
+                                    <p>엔씨소프트, 제13회 대한민국소통어워즈 공감콘텐츠대상 종합대상 수상</p>
+                                    <p>FUSER 북미•유럽 출시</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="page_wrap">
+                            <ul class="gil">
+                                <li>
+                                    <img src="./image/2019.png" alt="2019">
+                                </li>
+                                <li>
+                                    <p>리니지2M, 이달의 G-rank 시상식 이달의 게임상 수상</p>
+                                    <p>엔씨소프트, 제2회 납세자축제 납세대상 수상</p>
+                                    <p>크로스 플레이 서비스 퍼플 출시</p>
+                                    <p>리니지2M 출시</p>
+                                    <p>엔씨소프트, 제28회 강남구민의 상 모범납세상 법인 부문 수상</p>
+                                    <p>엔씨소프트서비스, 자회사형 장애인 표준사업장 인증 획득</p>
+                                    <p>엔씨소프트, 2019 Great Company Award 글로벌경쟁력 부문 수상</p>
+                                    <p>길드워2, TechRadar 'The Best MMOs of 2018'로 선정</p>
+                                    <p>아이온 레기온즈 오브 워 출시</p>
+                                    <p>엔씨소프트, 개인정보보호 프레임워크 국제인증(ISO/IEC 29100) 획득</p>
+                                    <p>엔씨소프트, 정보보안 관리체계 국제인증(ISO/IEC 27001) 획득</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="page_wrap">
+                            <ul class="gil">
+                                <li class="gil2">
+                                    <img src="./image/2018.png" alt="2018">
+                                </li>
+                                <li>
+                                    <p>엔씨소프트, 2018 Great Company Award 고속성장 부문 수상</p>
+                                    <p>엔씨소프트, 2018 Great Company Award 일자리창출 부문 수상</p>
+                                    <p>웹툰·웹소설 콘텐츠 플랫폼 버프툰 출시</p>
+                                    <p>캐릭터 브랜드 스푼즈 출시</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="page_wrap">
+                            <ul class="gil">
+                                <li>
+                                    <img src="./image/2017.png" alt="2017">
+                                </li>
+                                <li>
+                                    <p>리니지M, 2017 G-Rank 서울 모바일 화제성 부문 수상</p>
+                                    <p>길드워2, MMORPG ‘The best of the best’로 선정</p>
+                                    <p>아라미 퍼즈벤처 출시</p>
+                                    <p>리니지M 출시</p>
+                                    <p>엔씨소프트, 2017 Great Company Award 건실경영 부문 수상</p>
+                                    <p>엔씨소프트, 제51회 납세자의 날 국세 일천억원 탑 수상</p>
+                                    <p>엔씨소프트 사내 어린이집 웃는땅콩, 국제표준화기구 외국어 학습 서비스 인증(ISO29991) 획득</p>
+                                    <p>엔씨소프트 사내 어린이집 웃는땅콩, 국제표준화기구 학습서비스 경영시스템 인증(ISO 29990) 획득</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="page_wrap">
+                            <ul class="gil">
+                                <li class="gil2">
+                                    <img src="./image/2016.png" alt="2016">
+                                </li>
+                                <li>
+                                    <p>리니지 레드나이츠 출시</p>
+                                    <p>NC문화재단, 2016 G-Rank 서울 특별상 심사위원 부문 수상</p>
+                                    <p>NC문화재단, 제11회 대한민국 인터넷대상 국무총리상 수상</p>
+                                    <p>NC문화재단, 2016 대한민국 게임대상 특별상 수상</p>
+                                    <p>NC문화재단 나의 AAC, 휴먼테크놀로지 어워드 2016 대상 수상</p>
+                                    <p>엔씨소프트 사내 어린이집 웃는땅콩, 보건복지부 어린이집 평가인증 만점 획득</p>
+                                    <p>NC문화재단, 문화체육관광부 장관 표창 수상</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="page_wrap">
+                            <ul class="gil">
+                                <li>
+                                    <img src="./image/2015.png" alt="2015">
+                                </li>
+                                <li>
+                                    <p>길드워2, Ten Ton Hammer ‘Game of the Year 2015’로 선정</p>
+                                    <p>엔씨소프트, 2015 한국의 경영대상 Dominant of the Value 부문 혁신역량 최우수기업 수상</p>
+                                    <p>블레이드 & 소울, 2015 G-Rank KOREA 특별상 마케팅 부문 수상</p>
+                                    <p>블레이드 & 소울, 2015 G-Rank KOREA 본상 PC(온라인) 작품성 부문 수상</p>
+                                    <p>엔씨소프트, 큐더스IR연구소 '2015 상장기업대상 Best IR 우수기업'으로 선정</p>
+                                    <p>엔씨소프트, 한국능률협회컨설팅 '2015년 한국에서 가장 존경받는 30대 기업'으로 선정</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="page_wrap">
+                            <ul class="gil">
+                                <li class="gil2">
+                                    <img src="./image/2014.png" alt="2014">
+                                </li>
+                                <li>
+                                    <p>엔씨소프트, 정보보호 관리체계 인증(ISMS) 획득</p>
+                                    <p>리니지, 산업정책연구원 '온라인게임 부문 2014 수퍼브랜드'로 선정</p>
+                                    <p>엔씨소프트 판교 R&D센터, 2014 한국건축문화대상 준공 부문 우수상 수상</p>
+                                    <p>엔씨소프트 판교 R&D센터, 제19회 경기도건축문화상 비주거 부문 대상 수상</p>
+                                    <p>엔씨소프트, IT 서비스 관리체계 국제인증(ISO/IEC20000) 획득</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="page_wrap">
+                            <ul class="gil">
+                                <li>
+                                    <img src="./image/2013.png" alt="2013">
+                                </li>
+                                <li>
+                                    <p>엔씨소프트, 2013 사랑나눔 사회공헌대상 콘텐츠, 정보기술 부문 대상 수상</p>
+                                    <p>리니지, 산업정책연구원 '온라인게임 부문 2013 수퍼브랜드'로 선정</p>
+                                    <p>판교 R&D센터 완공</p>
+                                    <p>와일드스타, MMORPG 'Most Wanted MMOs of 2013' 1위로 선정</p>
+                                    <p>길드워2, PC Games '최근 20년간 최고의 RPG(Die besten Online-Rollenspiele)' 1위로 선정</p>
+                                    <p>블레이드 & 소울·길드워2·리니지 이터널, WGGC 2013 '중국 10대 온라인 게임 기대작'으로 선정</p>
+                                    <p>엔씨 아이액션북 '우리동네 곤충친구', Parents’ Choice Award 2013 모바일 앱 부문 금상 수</p>
+                                    <p>엔씨 아이액션북 '숲에서 만난 곤충', 아시아 스마트폰 앱 콘테스트 2012/2013 Games and Edutainment 부문 은상 수상</p>
+                                    <p>와일드스타, PAX East 2013 어워드 가장 혁신적인 게임상(Most Innovative) 수상</p>
+                                    <p>진 작룡문 출시</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="page_wrap">
+                            <ul class="gil">
+                                <li class="gil2">
+                                    <img src="./image/2012.png" alt="2012">
+                                </li>
+                                <li>
+                                    <p>미국 법인 NC West 설립</p>
+                                    <p>길드워2, IGN ‘Best PC Graphics of 2012’로 선정</p>
+                                    <p>길드워2, Time 'Best Game of 2012'로 선정</p>
+                                    <p>블레이드 & 소울, 2012 대한민국 게임대상 기술·창작상 게임캐릭터 부문 수상</p>
+                                    <p>리니지, 산업정책연구원 '온라인게임 부문 2012 수퍼브랜드'로 선정</p>
+                                    <p>길드워2 출시</p>
+                                    <p>블레이드 & 소울 출시</p>
+                                    <p>NC문화재단 설립</p>
+                                    <p>엔씨소프트 김택진 대표, 대한민국 인터넷 30주년 기념식 공로상 수상</p>
+                                    <p>게임회사 ㈜엔트리브소프트 인수</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="page_wrap">
+                            <ul class="gil">
+                                <li>
+                                    <img src="./image/2011.png" alt="2011">
+                                </li>
+                                <li>
+                                    <p>아이온, 제1회 아시아 온라인게임 어워드 한국 최고 인기 온라인게임상 수상</p>
+                                    <p>아이온, 제1회 아시아 온라인게임 어워드 최고 크리에이티브상 수상</p>
+                                    <p>아이온, 제1회 아시아 온라인게임 어워드 대상 수상</p>
+                                    <p>엔씨소프트, 벤처1,000억기업 수익성 부문 우수기업상 수상</p>
+                                    <p>엔씨소프트서비스, 한국능률협회컨설팅 선정 2011년 KSQI 콜센터 부문 인증 획득</p>
+                                    <p>프로야구단 NC 다이노스 창단</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="page_wrap">
+                            <ul class="gil">
+                                <li class="gil2">
+                                    <img src="./image/2010.png" alt="2010">
+                                </li>
+                                <li>
+                                    <p>엔씨소프트, 제9회 정보보호대상 우수상 수상</p>
+                                    <p>길드워2, Gamescom 2010 최고 온라인 게임(Best Online Game) 수상</p>
+                                    <p>엔씨소프트, 개인정보보호 관리체계 국제인증(BS10012) 획득</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="page_wrap">
+                            <ul class="gil">
+                                <li>
+                                    <img src="./image/2009.png" alt="2009">
+                                </li>
+                                <li>
+                                    <p>엔씨소프트 김택진 대표, 제3회 언스트앤영 최우수 기업가상 엔터테인먼트 부문 수상</p>
+                                    <p>엔씨소프트, 제2회 한국문화산업 대상 수상</p>
+                                    <p>아이온, PAX 2009 최고 MMO 게임(Best MMO) 수상</p>
+                                    <p>아이온, Gamescom 2009 최고 온라인 게임(Best Online Game) 수상</p>
+                                    <p>㈜엔씨소프트서비스, 계열회사로 추가</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="page_wrap">
+                            <ul class="gil">
+                                <li class="gil2">
+                                    <img src="./image/2008.png" alt="2008">
+                                </li>
+                                <li>
+                                    <p>아이온, 2008 대한민국 게임대상 대상 수상</p>
+                                    <p>2008 올해의 인터넷기업상 특별상(웹2.0) 부문 수상</p>
+                                    <p>엔씨소프트, 2008 올해의 인터넷기업상 게임 부문 수상</p>
+                                    <p>아이온 출시</p>
+                                    <p>엔씨소프트 삼성동 R&D센터, 제26회 서울특별시 건축상 장려상 수상</p>
+                                    <p>엔씨소프트 삼성동 R&D센터, 2008 한국건축문화대상 준공 부문 우수상 수상</p>
+                                    <p>삼성동 R&D센터 완공</p>
+                                    <p>엔씨소프트, 정보보호 안전진단 필증 획득</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="page_wrap">
+                            <ul class="gil">
+                                <li>
+                                    <img src="./image/2007.png" alt="2007">
+                                </li>
+                                <li>
+                                    <p>리니지, 웹어워드 코리아 2007 문화/레포츠 부문 게임/스포츠 분야 대상 수상</p>
+                                    <p>엔씨소프트 김택진 대표, 2007 대한민국 문화콘텐츠 해외진출 유공자 대통령 표창 수상</p>
+                                    <p>엔씨소프트, 2007 올해의 인터넷기업상 해외진출 부문 수상</p>
+                                    <p>리니지, 산업정책연구원 '온라인게임 부문 2007 수퍼브랜드'로 선정</p>
+                                    <p>엔씨소프트 김택진 대표, 제41회 납세자의 날 기획재정부 장관 표창 수상</p>
+                                    <p>엔씨소프트, 정보보호 안전진단 필증 획득</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="page_wrap">
+                            <ul class="gil">
+                                <li class="gil2">
+                                    <img src="./image/2006.png" alt="2006">
+                                </li>
+                                <li>
+                                    <p>리니지, 웹어워드 코리아 2006 게임 분야 최우수상 수상</p>
+                                    <p>엔씨소프트, 2006 대한민국 게임대상 사회공헌우수기업상 수상</p>
+                                    <p>	리니지, 산업정책연구원 '온라인게임 부문 2006 수퍼브랜드'로 선정</p>
+                                    <p>길드워, GameAmp 최우수 PvP(Best PvP) 수상</p>
+                                    <p>아이온, GameAmp 최우수 그래픽(Best Graphics) 수상</p>
+                                    <p>엔씨소프트, GameAmp 최우수 부스(Best Booth) 수상</p>
+                                    <p>아이온, STRATICS The Golden Cogs 최우수 그래픽(Best Graphics) 수상</p>
+                                    <p>길드워, AIAA 온라인 게임 부문 1위 수상</p>
+                                    <p>엑스틸 출시</p>
+                                    <p>엔씨소프트, 정보보호 안전진단 필증 획득</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="page_wrap">
+                            <ul class="gil">
+                                <li>
+                                    <img src="./image/2005.png" alt="2005">
+                                </li>
+                                <li>
+                                    <p>엔씨소프트, 산업자원부 선정 세계일류상품 생산기업 정식 인증 획득</p>
+                                    <p>길드워, 2005 대한민국 게임대상 기술/창작상 그래픽 부문 수상</p>
+                                    <p>리니지2, 2005 대한민국 문화콘텐츠 수출대상 수상</p>
+                                    <p>리니지, 웹어워드 코리아 2005 엔터테인먼트 분야 대상 수상</p>
+                                    <p>길드워, 2005년 디지털콘텐츠대상 대상 수상</p>
+                                    <p>리니지, 산업정책연구원 '온라인게임 부문 2005 수퍼브랜드'로 선정</p>
+                                    <p>엔씨소프트, 동아일보·한국IBM BCS '2005년 존경받는 30대 한국 기업'으로 선정</p>
+                                    <p>길드워 출시</p>
+                                    <p>길드워, 2005년 2분기 디지털콘텐츠대상 온라인게임 분야 수상</p>
+                                    <p>엔씨소프트, 정보보호 안전진단 필증 획득</p>
+                                    <p>엔씨소프트, RPG Vault 'Developer/Publisher of the Year'로 선정</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="page_wrap">
+                            <ul class="gil">
+                                <li class="gil2">
+                                    <img src="./image/2004.png" alt="2004">
+                                </li>
+                                <li>
+                                    <p>엔씨소프트, 웹어워드 코리아 2004 게임 부문 우수사이트 수상</p>
+                                    <p>리니지2, 웹어워드 코리아 2004 게임 부문 대상 수상</p>
+                                    <p>리니지, 산업정책연구원 '론라인게임 부문 2004 수퍼브랜드'로 선정</p>
+                                    <p>엔씨소프트, 한국생산성본부 '2004년 국가고객만족지수 MMORPG 부문 1위'로 선정</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="page_wrap">
+                            <ul class="gil">
+                                <li>
+                                    <img src="./image/2003.png" alt="2003">
+                                </li>
+                                <li>
+                                    <p>리니지2, 2003 대한민국 게임대상 기술/창작상 그래픽 부문 수상</p>
+                                    <p>리니지2, 2003 대한민국 게임대상 대상 수상</p>
+                                    <p>엔씨소프트, 제4회 정보통신기업 디지털대상 대통령상 수상</p>
+                                    <p>리니지2 출시</p>
+                                    <p>엔씨소프트, 한국정보통신산업협회 '개인정보보호 우수업체'로 선정</p>
+                                    <p>대만 법인 NC Taiwan 설립</p>
+                                    <p>유가증권시장 이전 상장</p>
+                                    <p>리니지2, Gamers’ Pulse 베스트 오브 쇼(Best of Show) 수상</p>
+                                    <p>엔씨소프트, IGN 최고 부스(Best Booth) 수상</p>
+                                    <p>길드워, IGN 슬리퍼 히트(Sleeper Hit) 수상</p>
+                                    <p>엔씨소프트, 제2회 공정거래의 날 공정거래위원장 표창 수상</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="page_wrap">
+                            <ul class="gil">
+                                <li class="gil2">
+                                    <img src="./image/2002.png" alt="2002">
+                                </li>
+                                <li>
+                                    <p>미국 게임회사 ArenaNet 인수</p>
+                                    <p>엔씨소프트, 2002 대한민국 게임대상 수출상 수상</p>
+                                    <p>엔씨소프트, 제3회 정보통신기업 디지털대상 정보통신부 장관상 수상</p>
+                                    <p>리니지, 2002 대한민국 문화콘텐츠 수출대상 수상</p>
+                                    <p>엔씨소프트 김택진 대표, 한국과학문화재단 '닮고 싶은 과학기술인'으로 선정</p>
+                                    <p>엔씨소프트 김택진 대표, Businessweek '세계 e비즈 영향력 있는 25인'으로 선정</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="page_wrap">
+                            <ul class="gil">
+                                <li>
+                                    <img src="./image/2001.png" alt="2001">
+                                </li>
+                                <li>
+                                    <p>	엔씨소프트 김택진 대표, 문화관광부 장관 표창 수상</p>
+                                    <p>	엔씨소프트, 정보통신부 '2002년도 유망 중소정보통신기업'으로 선정</p>
+                                    <p>엔씨소프트, 올해의 정보통신중소기업 대상 수상</p>
+                                    <p>	엔씨소프트 김택진 대표, 소프트엑스포 ＆ DCF 2001 S/W산업발전 유공자 산업포장 수상</p>
+                                    <p>엔씨소프트, 산업자원부 선정 2001년 차세대 세계일류상품 인증 획득</p>
+                                    <p>	엔씨소프트, 제1회 한국IR대상 우수상 수상</p>
+                                    <p>	엔씨소프트 김택진 대표, Far Eastern Economic Review '변화를 주도할 인물'로 선정</p>
+                                    <p>	일본 법인 NC Japan 설립</p>
+                                    <p>엔씨소프트 김택진 대표, Businessweek '아시아의 스타'로 선정</p>
+                                    <p>엔씨소프트, 제2회 정보통신기업 디지털대상 국무총리상 수상</p>
+                                    <p>	㈜엔씨아이티에스, 계열회사로 추가</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="page_wrap">
+                            <ul class="gil">
+                                <li class="gil2">
+                                    <img src="./image/2000.png" alt="2000">
+                                </li>
+                                <li>
+                                    <p>미국 법인 NC Interactive 설립</p>
+                                    <p>코스닥 등록</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="page_wrap">
+                            <ul class="gil">
+                                <li>
+                                    <img src="./image/1998.png" alt="1998">
+                                </li>
+                                <li>
+                                    <p>리니지, 1998 대한민국 게임대상 대상 수상</p>
+                                    <p>리니지 출시</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="page_wrap">
+                            <ul class="gil">
+                                <li class="gil2">
+                                    <img src="./image/1997.png" alt="1997">
+                                </li>
+                                <li>
+                                    <p>(주)엔씨소프트 설립</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section class="page" id="page3">
+                    <figure class="sub_ban">
+                        <img src="./image/company3.png" alt="가치와 목표">
+                        <div class="tit_box">
+                            <h2 class="sub_tit">가치와 목표</h2>
+                            <p class="sub_com">엔씨가 꿈꾸는 미래는 물리적인 시공간의 제약을 넘어 모두가
+                                즐거움으로 연결되는 무한한 가능성의 세계<br>
+                                끈임없는 도전으로 그 세계를 창조해 나가는 엔씨의 진지함과 열정을 보여주는 새로운 방식<br>
+                                WINDOW TO THE FUTURE</p>
+                        </div>
+                    </figure>
+                    <div class="bread_box">
+                        <div class="bread_wrap">
+                            <ul class="bread">
+                                <li class="item1">
+                                    <a href="index" class="home">HOME</a>
+                                </li>
+                                <li class="item2">WHO WE ARE</li>
+                                <li class="item3">
+                                    <select name="sel" id="sel3" class="sel">
+                                        <option value="company.html#page1" >기업 소개</option>
+                                        <option value="company.html#page2" >걸어온 길</option>
+                                        <option value="company.html#page3" selected>가치와 목표</option>
+                                        <option value="company.html#page4" >지속가능경영</option>
+                                        <option value="company.html#page5" >NC 21 MOMENTS</option>
+                                    </select>
+                                </li>    
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="page_con">
+                        <div class="page_wrap2">
+                            <h1 class="jemok">CORE VALUE</h1>
+                            <div class="page_wrap_small">
+                                <ul>
+                                    <li>
+                                        <h3>INTEGRITY</h3>
+                                        <h6 class="small">퀄리티를 향한 진정성</h6>
+                                        <p>끈임없이 고민하고 다듬는 과정이 퀄리티를 만듭니다.<br>
+                                            사람들을 감동시킬 때까지 진지하게 임합니다.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="page_wrap_small">
+                                <ul>
+                                    <li>
+                                        <h3>PASSION</h3>
+                                        <h6 class="small">새로운 시도를 멈추지 않는 열정</h6>
+                                        <p>우리에게 실현 불가능한 세계는 없습니다.<br>
+                                            창의를 향한 헌신과 열정으로 무한한 세계를 창조합니다.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="page_wrap_small">
+                                <ul>
+                                    <li>
+                                        <h3>NEVER-ENDING-CHALLENGE</h3>
+                                        <h6 class="small">즐거운 세상을 만들기 위한 끈임없는 도전</h6>
+                                        <p>미래는 새로운 생각에서 출발합니다.<br>
+                                            즐거움으로 연결된 세상을 만들기 위해 도전을 멈추지 않습니다.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="page" id="page4">
+                    <figure class="sub_ban">
+                        <img src="./image/layer1_img01.jpg" alt="지속가능경영">
+                        <div class="tit_box">
+                            <h2 class="sub_tit">지속가능경영</h2>
+                            <p class="sub_com">PUSH FOR A BETTER FUTURE<br>
+                            PLAY FOR SUSTAINABILTY</p>
+                        </div>
+                    </figure>
+                    <div class="bread_box">
+                        <div class="bread_wrap">
+                            <ul class="bread">
+                                <li class="item1">
+                                    <a href="index" class="home">HOME</a>
+                                </li>
+                                <li class="item2">WHO WE ARE</li>
+                                <li class="item3">
+                                    <select name="sel" id="sel4" class="sel">
+                                        <option value="company.html#page1" >기업 소개</option>
+                                        <option value="company.html#page2" >걸어온 길</option>
+                                        <option value="company.html#page3" >가치와 목표</option>
+                                        <option value="company.html#page4" selected>지속가능경영</option>
+                                        <option value="company.html#page5" >NC 21 MOMENTS</option>
+                                    </select>
+                                </li>    
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="page_con">
+                        <div class="page_wrap">
+                            <h1 class="esg">NC ESG 거버넌스</h1>
+                            <p class="nae">엔씨는 '즐거움으로 연결된 새로운 세상'을 목표로 사회의 질적 성장에 기여하고<br>
+                                다양한 이해관계자들에게 즐거움을 선사하고자 합니다.<br>
+                                이를 위해 ESG경영위원회를 중심으로 워킹그룹을 구성해 체계적으로 지속가능경영을 추진해 오고 있습니다.
+                            </p>
+                            <img src="./image/gachi.png" alt="사진1" class="gachi">
+                        </div>
+
+
+                        <div class="page_wrap">
+                            <h1 class="esg">PLAY for Sustainability</h1>
+                            <p class="nae">엔씨는 올바르고 진정성 있는 방식으로 지속가능한 사회를 만들어 나갑니다.</p>
+                            <ul class="pro_lst">
+                                <li>
+                                    <img src="./image/jisock1.jpg" alt="지속가능경영1">
+                                </li>
+                                <li>
+                                    <h2>건강한 조직 문화,<br>편견 없는 즐거움</h2>
+                                    <p>엔씨는 콘텐츠 안과 밖에서 보다 폭넓게<br>
+                                        다양성을 포용하고자 합니다.<br>우리 구성원의 다양성을 존중하고<br>
+                                        이를 통해 누구나 공감할 수 있는 콘테를 제작해<br>
+                                        모두가 즐거운 세상으로 이끌어 나갑니다.</p>
+                                </li>
+                            </ul>
+                                
+                            <ul class="pro_lst">
+                                <li class="jisok2">
+                                    <img src="./image/jisock2.jpg" alt="지속가능경영2">
+                                </li>
+                                <li>
+                                    <h2>신뢰할 수 있는 글로벌 서비스 환경</h2>
+                                    <p>엔씨는 글로벌 정보보안체계를 구축하여<br>언제 어디서나 안전하게
+                                        서비스를 이용하고<br>콘텐츠를 즐길 수 있도록 합니다.</p>       
+                                </li>                         
+                            </ul>
+                            <ul class="pro_lst">
+                                <li>
+                                    <img src="./image/jisock3.jpg" alt="지속가능경영3">
+                                </li>
+                                <li>
+                                    <h2>선도적 기술개발과 윤리적 가치</h2>
+                                    <p>엔씨는 첨단 기술에 윤리를 더해<br>디지털 시대의 책임을 다하고자 합니다.<br>
+                                        AI 기술이 '인간 중심의 AI'로 지속 성장하기 위해<br>
+                                        원칙을 제정하고 이를 기술 개발 및 운영 과정에<br>반영될 수 있도록 합니다.</p>                                
+                                </li>
+                            </ul>
+                            <ul class="pro_lst">
+                                <li class="jisok2">
+                                    <img src="./image/jisock4.jpg" alt="지속가능경영4">
+                                </li>
+                                <li>
+                                    <h2>미래세대 기회 부여</h2>
+                                    <p>엔씨는 우리의 미래세대에게<br>창의적 경험의 기회를 선사하고자 합니다.<br>
+                                        미래의 주역인 아이들이 자유롭게 상상하고<br>도전할 수 있도록 '프로젝토리'와 더불어<br>
+                                        사회의 질적 성장을 위해 다양한 사업을 진행합니다.</p>                                
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="page_wrap">
+                            <ul class="pro_lst">
+                                <li class="li1">
+                                    <img src="./image/jisock5.png" alt="지속가능경영5">
+                                </li>
+                                <li>
+                                    <h1 class="esg1">지속가능경영보고서</h1>
+                                    <h2>엔씨의 첫 지속가능경영보고서</h2>
+                                    <p>엔씨는 세상 모두가 즐거움으로<br>연결되는 미래를 꿈꿉니다.<br>
+                                        이번 보고서를 통해 지속가능경영을 위한<br>엔씨의 노력과 다짐을 공유하고자 합니다.</p>
+                                </li>
+                            
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section class="page" id="page5">
+                    <figure class="sub_ban">
+                        <img src="./image/layer1_img02.jpg" alt="NC 21 MOMENTS">
+                        <div class="tit_box">
+                            <h2 class="sub_tit">NC 21 MOMENTS</h2>
+                            <p class="sub_com">NCDP<br>
+                                게임을 사랑하는 직원들이 서로의 지식과 경험을 공유하고<br>
+                                새로운 개발 문화를 만들어가는 NCSOFT DEVELOPERS PARTY!<br>
+                                각자의 전문 분야에서 경험한 개발 노하우를 나누고<br>
+                                게임 트렌드와 새로운 기술을 탐색하고 토론하며<br>
+                                소통과 공유의 문화 속에서 지식 이상의 가치를 나누는 날입니다.<br></p>
+                        </div>
+                    </figure>
+                    <div class="bread_box">
+                        <div class="bread_wrap">
+                            <ul class="bread">
+                                <li class="item1">
+                                    <a href="index" class="home">HOME</a>
+                                </li>
+                                <li class="item2">WHO WE ARE</li>
+                                <li class="item3">
+                                    <select name="sel" id="sel5" class="sel">
+                                        <option value="company.html#page1" >기업 소개</option>
+                                        <option value="company.html#page2" >걸어온 길</option>
+                                        <option value="company.html#page3" >가치와 목표</option>
+                                        <option value="company.html#page4" >지속가능경영</option>
+                                        <option value="company.html#page5" selected>NC 21 MOMENTS</option>
+                                    </select>
+                                </li>    
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="page_con">
+                        <div class="page_wrap">
+                        </div>
+                    </div>
+                </section>
+            </div>   
+        </div>
+        <script>
+            var sel = document.getElementsByClassName("sel");
+
+            sel[0].addEventListener("change", function(){
+                location.href = sel[0].value;
+            });
+            sel[1].addEventListener("change", function(){
+                location.href = sel[1].value
+            });
+            sel[2].addEventListener("change", function(){
+                location.href = sel[2].value;
+            });
+            sel[3].addEventListener("change", function(){
+                location.href = sel[3].value;
+            });
+            sel[4].addEventListener("change", function(){
+                location.href = sel[4].value;
+            });
+        </script>
+
+
+        <footer i="ft">
+            <div class="ft_wrap">
+                <nav class="fnb">
+                    <a href="">고객센터</a>
+                    <a href="">클린신고센터</a>
+                    <a href="">견학 신청</a>
+                    <a href="">사이트맵</a>
+                    <a href="">개인정보처리방침</a>
+                    <a href="">정보보호현황</a>
+                    <a href="">오시는 길</a>
+                </nav>
+                <ul>
+                    <nav class="snb">
+                        <ul>
+                            <li class="sns1">
+                                <a href="https://www.youtube.com/channel/UCbiqc9mdIz3XEH6LG5nCeMg" title="유튜브"><i= class="xi-youtube-play"></i></a>
+                            </li>
+                            <li class="sns2">
+                                <a href="https://www.facebook.com/NCSOFT.Korea/" title="페이스북"><i= class="xi-facebook"></i></a>
+                            </li>
+                            <li class="sns3">
+                                <a href="" title="네이버-포스트"><i= class="xi-naver"></i></a>
+                            </li>
+                        </ul>
+                    </nav>
+                </ul>
+                <p class="copyright">Copyright © NCSOFT All rights reserved</p>
+            </div>
+  
+        <footer>
+
+        </footer>
+
+
+    </div>
+</body>
+</html>

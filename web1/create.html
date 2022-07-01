@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./image/NC.png">
+    <link rel="apple-touch-icon" href="./image/NC.png">
+    <!-- 검색(메타) 정보 -->
+    <meta name="url" content="https://127.0.0.1:5500/web1/index.html">
+    <meta name="title" content="NCsoft">
+    <meta name="description" content="NCsoft의 WHO WE ARE, WHAT WE CREAT, MEDIA CENTER">
+    <meta name="keywords" content="NCsoft, NC, 엔씨, 엔씨소프트">
+    <!-- 오픈 그래프(공통,OG) -->
+    <meta property="og:url" content="https://127.0.0.1:5500/web1/index.html">
+    <meta property="og:title" content="NCsoft">
+    <meta property="og:description" content="NCsoft의 WHO WE ARE, WHAT WE CREAT, MEDIA CENTER,
+    INVESTORS, CAREERS">
+    <meta property="og:image" content="./image/NC.png">
+    <title>NCSOFT</title>
+
+    <!-- 기본 플러그인 -->
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <!-- 웹 폰트/폰트 모듈 연결 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap" rel="stylesheet">
+
+
+    <style>
+        @font-face {
+            font-family: 'Noto Sans KR', sans-serif;
+            src : url(https://fonts.google.com/noto/specimen/Noto+Sans+KR?subset=korean);
+            font-weight : normal;
+            font-style : normal;
+        }
+        @font-face {
+            font-family: 'Noto Sans KR4', sans-serif;
+            src: url(https://fonts.google.com/noto/specimen/Noto+Sans+KR?subset=korean);
+            font-weight: normal;
+            font-style : normal;
+        }
+
+        #language { font-size: 14px; font-family: 'Noto Sans KR', sans-serif;}
+    </style>
+
+    <!-- 웹 아이콘 연결 -->
+    <!-- XEIcon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <!-- 스타일 초기화 모듈 연결 -->
+    <link rel="stylesheet" href="./css/normal.css">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="sub_common.css">
+
+    <style>
+        #page1 .page_wrap { background-color: #FFF }
+        #page2 .page_wrap { background-color:#FFF }
+        #page3 .page_wrap { background-color:#FFF }
+        #page4 .page_wrap { background-color:#FFF }
+
+        .page_con { position: relative; padding: 0; margin: 0 auto; }
+        .lng {  width: 100%; height: auto; border-style: none; display : block; }
+        
+
+        #hd {  position:fixed; top: 0; left: 0; height:100px; z-index:999;
+        background-color: rgba(255,255,255,255);   }   
+        .page { clear:both; min-height:100vh; display:none; width: 100%; }
+        .sub_ban { clear:both; width: 100%; position:relative; }
+        .sub_ban img { display:block; width: 100%; height:auto; }
+        .tit_box { position:absolute; top:0px; left: 0px; z-index:30; padding-top: 150px; 
+        padding-left: 100px; color:#fff; text-shadow:1px 1px 1px #333;}
+        .sub_tit { font-size:48px; }
+        .sub_com { font-size:20px; padding-top: 40px; }
+        #page1 .tit_box, #page4 .tit_box { color:#333; text-shadow:1px 1px 1px #fff;}
+        .bread_box { clear: both; width: 100%; height: 48px; border-bottom:3px solid #f1f1f1; }
+        .bread_wrap { width: 1280px; margin: 0 auto; }
+        .bread { height: 48px; line-height: 48px;  }
+        .bread li { float:left; padding-right: 30px; }
+        .bread li:after { content:">"; padding-left: 24px; }
+        .bread li:last-child::after { content: ""; }
+        .page:target { display:block; }
+        .page_con { clear:both; width: 100%; }
+
+        .page_wrap { width: 1280px; margin: 0 auto; min-height:50vh; position: relative; }
+ 
+        .sec_img { clear:both; display:block; width: 1200px; margin:14px auto; 
+        overflow:hidden; }
+        .sec_tit { font-size: 42px;    font-weight: 700;    line-height: 1.64;
+        letter-spacing: -0.03em; padding-top: 2em; padding-bottom: 1em; }
+        .sec_slogan { clear:both; font-size:22px; position:relative; height: 62px; 
+        width: 100%; margin-top:3em; }
+        .sec_slogan:before { content:"";  position:absolute; bottom:0px; background-color:#ccc; 
+        width:100%; height:2px; right:0px; }
+        .sec_slogan:after { content:"";  position:absolute; bottom:0px; left:0px;
+        width: 280px; height: 2px; background-color: #111; }
+        .pro_lst { clear:both; width: 1280px; padding-bottom: 60px; }
+        .pro_lst:after { content:""; display:block; width: 100%; clear:both; height: 100px; }
+        .pro_lst li { width: 640px; float:left; padding:3.6em; min-height:520px;
+        box-sizing: border-box; overflow-x:hidden; }
+        .pro_lst li:nth-child(2n+1) { clear:both; }
+        .pro_lst li img { display:block;  float:left; max-width:100%; }
+        .pro_para { padding-top: 1.8em; padding-bottom:0.8em; font-size:15px; 
+        padding-left:3em;  }
+        .pro_tit { padding-top: 1.4em; padding-bottom: 1.2em; font-size:24px; 
+        font-weight: bold; }
+        .pro_para .spot { font-weight:700; }
+        .blank { clear:both; width: 100%; height: 60px; }
+
+
+    </style>
+
+</head>
+
+
+
+
+<body>   
+    <div class="wrap">
+        <header id="hd">
+            <div class="hd_wrap">
+                <a href="index.html" class="logo">
+                    <img src="./image/NC.png" alt="NCSOFT">
+                </a>
+                <nav id="gnb">
+                    <ul>
+                        <li>
+                            <span>WHO WE ARE</span>
+                            <ul class="sub">
+                                <li><a href="company.html#page1">기업 소개</a></li>
+                                <li><a href="company.html#page2">걸어온 길</a></li>
+                                <li><a href="company.html#page3">가치와 목표</a></li>
+                                <li><a href="company.html#page4">지속가능경영</a></li>
+                                <li><a href="company.html#page5">NC 21 MOMENTS</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>WHAT WE CREAT</span>
+                            <ul class="sub">
+                                <li><a href="create.html#page1">리니지</a></li>
+                                <li><a href="create.html#page2">리니지2</a></li>
+                                <li><a href="create.html#page3">아이온</a></li>
+                                <li><a href="create.html#page4">블레이드 & 소울</a></li>
+                                <li><a href="create.html#page5">블레이드 & 소울2</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>MEDIA CENTER</span>
+                            <ul class="sub">
+                                <li><a href="media.html#page1">뉴스</a></li>
+                                <li><a href="media.html#page2">미디어 행사</a></li>
+                                <li><a href="media.html#page3">스토리</a></li>
+                                <li><a href="media.html#page4">멀티미디어</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>INVESTORS</span>
+                            <ul class="sub">
+                                <li><a href="investors.html#page1">기업지배구조</a></li>
+                                <li><a href="investors.html#page2">재무 정보</a></li>
+                                <li><a href="investors.html#page3">공시 정보</a></li>
+                                <li><a href="investors.html#page4">주가 정보</a></li>
+                                <li><a href="investors.html#page5">IR 자료</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>CAREERS</span>
+                            <ul class="sub">
+                                <li><a href="careers.html#page1">공고 보기</a></li>
+                                <li><a href="careers.html#page2">지원 안내</a></li>
+                                <li><a href="careers.html#page3">인사 제도</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                
+                
+                <p id="language">
+                   <a href="">KR</a>
+                   <a href="">EN</a>
+                   <a href="">CN</a>
+                   <a href="">JP</a>
+                </p>
+            </div>
+        </header>
+        
+
+        <div class="content">
+            <div id="content_wrap">
+                <section class="page" id="page1">
+                    <figure class="sub_ban">
+                        <img src="./image/lineage.png" alt="리니지">
+                        <div class="tit_box">
+                            <h2 class="sub_tit">리니지</h2>
+                            <p class="sub_com">1998년 출시한 중세 판타지 시대 배경의 MMORPG이자
+                                국내 최초의 인테넛 기반 온라인 게임인 리니지.<br>2008년 단일 게임 최초로 누적 매출
+                                1조원을 달성하고 혈맹 시스템과 공성전 등 MMORPG의 기틀을 마련하며<br> 20년이 지난
+                                지금까지 대한민국을 대표하는 온라인 문화 콘텐츠로 막강한 영향력을 발휘하고 있다.
+                            </p>
+                        </div>
+                    </figure>
+                    <div class="bread_box">
+                        <div class="bread_wrap">
+                            <ul class="bread">
+                                <li class="item1">
+                                    <a href="index" class="home">HOME</a>
+                                </li>
+                                <li class="item2">WHAT WE CREATE</li>
+                                <li class="item3">
+                                    <select name="sel" id="sel1" class="sel">
+                                        <option value="create.html#page1" selected>리니지</option>
+                                        <option value="create.html#page2" >리니지2</option>
+                                        <option value="create.html#page3" >AION</option>
+                                        <option value="create.html#page4" >BLADE & SOUL</option>
+                                        <option value="create.html#page5" >BLADE & SOUL 2</option>
+                                    </select>
+                                </li>    
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="page_con">
+                        <div class="page_wrap">
+                            <h2 class="sec_tit">대한민국 온라인 게임의 역사를 연<br>MMORPG의 표준</h2>
+                            <ul class="pro_lst">
+                                <li>
+                                    <img src="./image/lng1.png" alt="리니지-1" class="lng">
+                                </li>
+                                <li>
+                                    <p class="pro_para">대한민국 온라인 게임의 성장과 발전을 이끈 대표 게임으로</p>
+                                    <p class="pro_para">군주 중심의 혈맹과 대규모 전투인 공성전, 무기 강화 시스템 등</p>
+                                    <p class="pro_para">리니지가 새롭게 창조한 특유의 시스템과 콘텐츠는</p>
+                                    <p class="pro_para">이후 탄생한 수많은 MMORPG의 표준이 됐다.</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="page_wrap">
+                            <div class="page_wrap">
+                                <h2 class="sec_tit">세계 최초의 대규모 RvR<br>공성전</h2>
+                                <ul class="pro_lst">
+                                    <li>
+                                        <img src="./image/lng2.jpg" alt="리니지-2" class="lng1">
+                                    </li>
+                                    <li>
+                                        <p class="pro_para">리니지가 세계 최초로 도입한 RvR 콘텐츠인 공성전은</p>
+                                        <p class="pro_para">성을 쟁탈하기 위한 혈맹 간의 대규모 전투 시스템이다.</p>
+                                        <p class="pro_para">협동과 대립을 통해 동일한 목표를 달성하는 과정에서</p>
+                                        <p class="pro_para">MMORPG의 핵심 재미를 구현해낸 공성전은</p>
+                                        <p class="pro_para">한국 온라인 게임의 특화된 전투 방식으로 확립됐다.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        <div class="page_wrap">
+                            <div class="page_wrap">
+                                <h2 class="sec_tit">온·오프라인을 휩쓴<br>리니지 신드롬</h2>
+                                <ul class="pro_lst">
+                                    <li>
+                                        <img src="./image/lng3.png" alt="리니지-3" class="lng">
+                                    </li>
+                                    <li>
+                                        <p class="pro_para">1998년 출시 직후부터 사회적 열풍을 일으킨 리니지는</p>
+                                        <p class="pro_para">서비스 개시 후 15개월 만에 100만 명의 회원을 달성하고</p>
+                                        <p class="pro_para">2016년에는 누적 매출 3조 원을 돌파하는 등 기록을 갱신해왔다.</p>
+                                        <p class="pro_para">아덴 왕국이라는 가상 세계에서 새로운 자아를 찾고</p>
+                                        <p class="pro_para">플레이어들의 자발적인 힘으로 연대의 스토리를 만들어 나가는</p>
+                                        <p class="pro_para">새롭고도 충격적인 문화적 경험은 온·오프라인의 경계를 넘어</p>
+                                        <p class="pro_para">리니지만의 고유한 사회화 현상으로 이어져오고 있다.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                    </div>
+                </section>
+                <section class="page" id="page2">
+                    <figure class="sub_ban">
+                        <img src="./image/lineage2.jpg" alt="리니지2" class="lng1">
+                        <div class="tit_box">
+                            <h2 class="sub_tit">리니지2</h2>
+                            <p class="sub_com">리니지의 150년 전 아덴 왕국의 통일 시대를 배경으로
+                                한 중세 판타지 세계관의 PC MMORPG 리니지2.<br>
+                                2003년 출시 당시 완성도 높은 3D 그래픽을 선보이며 심리스 오픈 월드를 통해 높은 자유도를 구현하고<br>
+                                바츠 해방 전쟁이라는 온라인 거대 서사를 탄생시켰다.
+                                </p>
+                        </div>
+                    </figure>
+                    <div class="bread_box">
+                        <div class="bread_wrap">
+                            <ul class="bread">
+                                <li class="item1">
+                                    <a href="index" class="home">HOME</a>
+                                </li>
+                                <li class="item2">WHATE WE CREATE</li>
+                                <li class="item3">
+                                    <select name="sel" id="sel2" class="sel">
+                                        <option value="create.html#page1" >리니지</option>
+                                        <option value="create.html#page2" selected>리니지2</option>
+                                        <option value="create.html#page3" >AION</option>
+                                        <option value="create.html#page4" >BLADE & SOUL</option>
+                                        <option value="create.html#page5" >BLADE & SOUL 2</option>
+                                    </select>
+                                </li>    
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="page_con">
+                        <div class="page_wrap">
+                            <h2 class="sec_tit">게임 그래픽 기술의<br>기준을 제시한<br>FULL 3D MMORPG</h2>
+                            <ul class="pro_lst">
+                                <li>
+                                    <img src="./image/lng2-1.png" alt="리니지2-1" class="lng">
+                                </li>
+                                <li>
+                                    <p class="pro_para">리니지2는 게임 내 전체 월드를 3D 그래픽으로 구현한</p>
+                                    <p class="pro_para">압도적인 그래픽 기술로 국내외에서 큰 호평을 받았다.</p>
+                                    <p class="pro_para">또한 출시 당시 언리얼 엔진2로 심리스 로딩 방식을 개발해</p>
+                                    <p class="pro_para">월드 간 이동에 따른 로딩 지연 없이 플레이를 즐길 수 있는</p>
+                                    <p class="pro_para">혁신적인 '심리스 오픈 월드' 기술을 선보였다.
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="page_wrap">
+                            <h2 class="sec_tit">플레이어들이 창조한 거대 서사<br>바츠 해방 전쟁</h2>
+                            <ul class="pro_lst">
+                                <li>
+                                    <img src="./image/lng2-2.jpg" alt="리니지2-2" class="lng">
+                                </li>
+                                <li>
+                                    <p class="pro_para">2004년 6월 바츠 서버에서 발생한 대규모 플레이어 간 전쟁인</p>
+                                    <p class="pro_para">바츠 해방 전쟁은 약 4년간 20만 명 이상의 플에이어가 참여하며</p>
+                                    <p class="pro_para">한국 게임사에서 유례 없는 '온라인 시민 혁명'으로 기록됐다.</p>
+                                    <p class="pro_para">또한 웹툰, 소설, 논문, 전시회 등 다양한 문화 콘텐츠로 재생산되며</p>
+                                    <p class="pro_para">온라인 게임의 사회성과 정치성이 반영된 사례로 손꼽히고 있다.</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="page_wrap">
+                            <h2 class="sec_tit">해외 게임 시장을 개척한<br>대한민국 대표<br>온라인 MMORPG</h2>
+                            <ul class="pro_lst">
+                                <li>
+                                    <img src="./image/lng2-3.jpg" alt="리니지2-3" class="lng">
+                                </li>
+                                <li>
+                                    <p class="pro_para">북미 출시를 시작으로 해외 시장에 첫 걸음을 내딘 리니지2는</p>
+                                    <p class="pro_para">대만과 일본, 중국, 유럽, 태국, 러시아 등에 진출하며</p>
+                                    <p class="pro_para">전 세계를 휩쓴 대작 온라인 게임으로 자리 잡았다.</p>
+                                    <p class="pro_para">특히 온라인 게임의 불모지라 불리던 일본에서</p>
+                                    <p class="pro_para">PC방 점유율 1위를 달성하는 등 큰 성공을 거두며 쾌거를 이뤘다.</p>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </section>
+                <section class="page" id="page3">
+                    <figure class="sub_ban">
+                        <img src="./image/aion.jpg" alt="가치와 목표">
+                        <div class="tit_box">
+                            <h2 class="sub_tit">AION</h2>
+                            <p class="sub_com">두 세계로 분열된 아트레이아의 영원의 탑을 둘러싼 천족과 마족
+                                그리고 용족의 전투를 그린 3D MMORPG.<br>국내 최초의 공중 PvP로 화제를 모은 아이온은
+                                완성도 높은 그래픽과 OST로 예술성까지 인정받으며<br>
+                                160주 연속 PC방 1위라는 게임사의 대기록을 세웠다.<br>
+                                </p>
+                        </div>
+                    </figure>
+                    <div class="bread_box">
+                        <div class="bread_wrap">
+                            <ul class="bread">
+                                <li class="item1">
+                                    <a href="index" class="home">HOME</a>
+                                </li>
+                                <li class="item2">WHAT WE CREATE</li>
+                                <li class="item3">
+                                    <select name="sel" id="sel3" class="sel">
+                                        <option value="create.html#page1" >리니지</option>
+                                        <option value="create.html#page2" >리니지2</option>
+                                        <option value="create.html#page3" selected>AION</option>
+                                        <option value="create.html#page4" >BLADE & SOUL</option>
+                                        <option value="create.html#page5" >BLADE & SOUL 2</option>
+                                    </select>
+                                </li>    
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="page_con">
+                        <div class="page_wrap">
+                            <div class="page_wrap">
+                                <h2 class="sec_tit">국내 최초<br>종족 간 공중 PvP</h2>  
+                                <ul class="pro_lst">
+                                    <li>
+                                        <img src="./image/aion1.jpg" alt="아이온-1" class="lng">
+                                    </li>
+                                    <li>
+                                        <p class="pro_para">날개를 이용해 하늘을 자유롭게 이동하며 즐기는 비행 전투는</p>
+                                        <p class="pro_para">아이온만의 상징이자 독보적인 콘텐츠로 자리 잡았다.</p>
+                                        <p class="pro_para">천족과 마족, 용족 간의 끝없는 전투를 다루는 아이온은</p>
+                                        <p class="pro_para">국내 게임사 최초로 공중 공간에서의 PvP 기술을 개발,</p>
+                                        <p class="pro_para">화려한 공중 전투를 구현하며 인기와 작품성을 모두 얻었다.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="page_wrap">
+                                <h2 class="sec_tit">게임음악의 새로운 역사를 쓴<br>아이온의 OST</h2>
+                                <ul class="pro_lst">
+                                    <li>
+                                        <img src="./image/aion2.jpg" alt="아이온-2" class="lng">
+                                    </li>
+                                    <li>
+                                        <p class="pro_para">아이온의 OST는 한국의 게임 음악 역사상</p>
+                                        <p class="pro_para">가장 완성도 높고 성공적인 음반으로 손꼽힌다.</p>
+                                        <p class="pro_para">아이온은 출시 당시 무려 3년 동안 제작된 OST를 공개하며</p>
+                                        <p class="pro_para">반지의 제왕 등으로 유명한 런던 애비로드 스튜디오에서</p>
+                                        <p class="pro_para">73인조 런던 심포니 오케스트라와 음악가 양방언 등이 참여한</p>
+                                        <p class="pro_para">블록버스터급 게임 음악으로 큰 감동을 선사했다.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="page_wrap">
+                                <h2 class="sec_tit">모두를 사로잡은<br>아름다운 이미지와 정교한 그래픽</h2>
+                                <ul class="pro_lst">
+                                    <li>
+                                        <img src="./image/aion3.jpg" alt="아이온-3" class="lng">
+                                    </li>
+                                    <li>
+                                        <p class="pro_para">아이온만의 아름답고도 감성적인 그래픽은</p>
+                                        <p class="pro_para">남녀 모두의 마음을 사로잡으며 그 작품성까지 높게 평가받았다.</p>
+                                        <p class="pro_para">예술의 경지에 이른 아이온의 섬세한 게임 아트는</p>
+                                        <p class="pro_para">2006년 E3에 처음 공개되어 최우수 그래픽상을 받았고</p>
+                                        <p class="pro_para">Gamescom 2009 최고 온라인 게임상, 아시아 온라인 어워드 대상 등</p>
+                                        <p class="pro_para">해외에서 그 작품성을 인정받으며 수많은 트로피를 거머쥐었다.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="page" id="page4">
+                    <figure class="sub_ban">
+                        <img src="./image/bladeandsoul.jpg" alt="블레이드앤소울">
+                        <div class="tit_box">
+                            <h2 class="sub_tit">BLADE & SOUL</h2>
+                            <p class="sub_com">무림 고수 '천하사절'인 홍석근의 밑에서 수련하던 막내가 자신을 돌본 홍문파를 멸문시킨 진서연을 향해<br>
+                            복수의 여정을 떠나는 스토리의 무협 액션 MMORPG.<br>
+                            2012년 6월 출시한 블레이드 & 소울은 동양적 세계관의 스토리텔링과 최고 수준의 그래픽,<br>
+                            실감나는 무협 액션 등의 기술력까지 더해진 역작으로 평가받는다.</p>
+                        </div>
+                    </figure>
+                    <div class="bread_box">
+                        <div class="bread_wrap">
+                            <ul class="bread">
+                                <li class="item1">
+                                    <a href="index" class="home">HOME</a>
+                                </li>
+                                <li class="item2">WHAT WE CREATE</li>
+                                <li class="item3">
+                                    <select name="sel" id="sel4" class="sel">
+                                        <option value="create.html#page1" >리니지</option>
+                                        <option value="create.html#page2" >리니지2</option>
+                                        <option value="create.html#page3" >AION</option>
+                                        <option value="create.html#page4" selected>BLADE & SOUL</option>
+                                        <option value="create.html#page5" >BLADE & SOUL 2</option>
+                                    </select>
+                                </li>    
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="page_con">
+                        <div class="page_wrap">
+                            <div class="page_wrap">
+                                <h2 class="sec_tit">독창적 스토리와 캐릭터가 돋보이는<br>동양 무협 세계관의 퓨전 판타지</h2>
+                                <ul class="pro_lst">
+                                    <li>
+                                        <img src="./image/bs1.png" alt="블레이드앤소울1" class="lng">
+                                    </li>
+                                    <li>
+                                        <p class="pro_para">동양적 무협 세계관을 바탕으로 주인공의 성장을 다룬</p>
+                                        <p class="pro_para">블레이드 & 소울만의 독창적인 스토리텔링과 캐릭터 설정은</p>
+                                        <p class="pro_para">여타의 MMORPG와 차별화되는 요소로 자리 잡았다.</p>
+                                        <p class="pro_para">매력적인 악녀 진서연, 영원한 사부 홍석근, 의롭고 정 많은 화중 등</p>
+                                        <p class="pro_para">입체적이면서도 개성 뚜렷한 캐릭터들이 만들어내는 스토리는</p>
+                                        <p class="pro_para">정교하게 짜인 컷신과 퀘스트를 통해 게임의 몰입감을 높인다.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="page_wrap">
+                                <h2 class="sec_tit">독보적인 무협 액션을 구현한<br>최고 수준의 그래픽</h2>
+                                <ul class="pro_lst">
+                                    <li>
+                                        <img src="./image/bs2.jpg" alt="블레이드앤소울2" class="lng">
+                                    </li>
+                                    <li>
+                                        <p class="pro_para">블레이드 & 소울은 하늘을 가르는 경공이나 물 위를 달리는 수상비 등</p>
+                                        <p class="pro_para">동양 무술을 응용한 무협 액션이 돋보이는 MMORPG다.</p>
+                                        <p class="pro_para">보다 현실적이고 생동감 넘치는 액션의 구현을 위해</p>
+                                        <p class="pro_para">최고 수준의 그래픽 기술과 콘셉트 아트가 적용됐고</p>
+                                        <p class="pro_para">언리얼 엔진 4 기반의 그래픽 리마스터를 통해</p>
+                                        <p class="pro_para">캐릭터 묘사와 전투신 등 시각 효과와 액션감이 강화됐다.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="page_wrap">
+                                <h2 class="sec_tit">게임에서 문화 콘텐츠로<br>블소 IP의 무한한 확장</h2>
+                                <ul class="pro_lst">
+                                    <li>
+                                        <img src="./image/bs3.jpg" alt="블레이드앤소울3" class="lng">
+                                    </li>
+                                    <li>
+                                        <p class="pro_para">블레이드 & 소울만의 독창적 스토리와 매력적인 캐릭터는</p>
+                                        <p class="pro_para">다양한 문화 콘텐츠로의 확장을 돕는 원동력이 됐다.</p>
+                                        <p class="pro_para">웹툰과 웹소설 형태의 서사 콘텐츠를 담은 사이트 '서고'와</p>
+                                        <p class="pro_para">진서연을 주인공으로 한 뮤지컬 '묵화마녀 진서연',</p>
+                                        <p class="pro_para">공식 e스포츠인 블소 토너먼트 월드 챔피언십까지</p>
+                                        <p class="pro_para">블레이드 & 소울의 문화적 실험은 계속되고 있다.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="page" id="page5">
+                    <figure class="sub_ban">
+                        <img src="./image/bladeandsoul2.jpg" alt="블레이드앤소울2">
+                        <div class="tit_box">
+                            <h2 class="sub_tit">BLADE & SOUL 2</h2>
+                            <p class="sub_com">'블레이드 & 소울'의 정식 후속작, '블레이드 & 소울 2'는 진화한 경공, 화려한 무공의 연계등<br>
+                                정형화된 전투를 탈피하며 MMORPG의 기술적 한계를 뛰어넘었다.<br>
+                                여기에 전작의 세계관을 아우르며 이어지는 스토리 시스템인 '사가',<br>
+                                동양적 색채가 묻어나는 아름답고 입체적인 월드는<br>
+                                '블레이드 & 소울 2' 이후 게임의 새로운 기준을 제시한다<br>
+                                </p>
+                        </div>
+                    </figure>
+                    <div class="bread_box">
+                        <div class="bread_wrap">
+                            <ul class="bread">
+                                <li class="item1">
+                                    <a href="index" class="home">HOME</a>
+                                </li>
+                                <li class="item2">WHAT WE CREATE</li>
+                                <li class="item3">
+                                    <select name="sel" id="sel5" class="sel">
+                                        <option value="comapny.html#page1" >리니지</option>
+                                        <option value="comapny.html#page1" >리니지2</option>
+                                        <option value="comapny.html#page1" >AION</option>
+                                        <option value="comapny.html#page1" >BLADE & SOUL</option>
+                                        <option value="comapny.html#page1" selected>BLADE & SOUL 2</option>
+                                    </select>
+                                </li>    
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="page_con">
+                        <div class="page_wrap">
+                            <h2 class="sec_tit">MMORPG의 정점을 찍은<br>인터랙티브한 전투와 액션</h2>
+                            <ul class="pro_lst">
+                                <li>
+                                    <img src="./image/bs2-1.jpg" alt="블레이드앤소울2-1" class="lng">
+                                </li>
+                                <li>
+                                    <p class="pro_para">상황에 따라 무공을 조합, 연계하는 등 전투 본연의 쾌감을 높였다.</p>
+                                    <p class="pro_para">플레이어의 행동에 따라 변하는 몬스터의 행동을 예측해</p>
+                                    <p class="pro_para">공격하거나 피하며 긴장감 넘치는 전투를 즐길 수도 있다.</p>
+                                    <p class="pro_para">뿐만 아니라 화려한 액션과 시원시원한 타격감으로</p>
+                                    <p class="pro_para">전작의 독보적인 무협 액션 MMORPG를 계승했다.</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="page_wrap">
+                            <h2 class="sec_tit">숨겨진 전설을 발견하는 재미,<br>하늘을 가르는 경공</h2>
+                            <ul class="pro_lst">
+                                <li>
+                                    <img src="./image/bs2-2.jpg" alt="블레이드앤소울2-2" class="lng">
+                                </li>
+                                <li>
+                                    <p class="pro_para">경공으로 산과 물 위를 뛰어넘어 미지의 공간을 마주하고,</p>
+                                    <p class="pro_para">새로운 몬스터나 이야기를 발견하는 등 탐험의 즐거움을 선사한다.</p>
+                                    <p class="pro_para">적의 공격을 피하거나 반격하는 등 전투에도 활용 가능한 경공은</p>
+                                    <p class="pro_para">이동 수단에서 한 발 나아가 새로운 플레이의 재미를 경험할 수 있다.</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="page_wrap">
+                        <h2 class="sec_tit">사가, 과거와 미래를 관통하는<br>미지의 이야기 속으로</h2>
+                            <ul class="pro_lst">
+                                <li>
+                                    <img src="./image/bs2-3.png" alt="블레이드앤소울2-3" class="lng">
+                                </li>
+                                <li>
+                                    <p class="pro_para">필드 곳곳에 숨겨진 기억의 조각을 발견해 게임 속 이야기를 듣고</p>
+                                    <p class="pro_para">캐릭터의 능력치까지 성장시킬 수 있는 스토리텔링 시스템 ‘사가’.</p>
+                                    <p class="pro_para">탐험의 재미와 동시에 성장의 기쁨까지 제공하는 사가는</p>
+                                    <p class="pro_para">영상, 일러스트, 소설, OST 등의 다양한 미디어를 통해</p>
+                                    <p class="pro_para">새로운 스토리텔링 방향성을 제시한다.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>   
+            <script>
+                $(document0).ready(function(){
+                    $(".sel").change(function(){
+                        location.href = this.value;
+                    });
+                });
+            </script>
+        </div>
+
+
+        <footer i="ft">
+            <div class="ft_wrap">
+                <nav class="fnb">
+                    <a href="">고객센터</a>
+                    <a href="">클린신고센터</a>
+                    <a href="">견학 신청</a>
+                    <a href="">사이트맵</a>
+                    <a href="">개인정보처리방침</a>
+                    <a href="">정보보호현황</a>
+                    <a href="">오시는 길</a>
+                </nav>
+                <ul>
+                    <nav class="snb">
+                        <ul>
+                            <li class="sns1">
+                                <a href="https://www.youtube.com/channel/UCbiqc9mdIz3XEH6LG5nCeMg" title="유튜브"><i= class="xi-youtube-play"></i></a>
+                            </li>
+                            <li class="sns2">
+                                <a href="https://www.facebook.com/NCSOFT.Korea/" title="페이스북"><i= class="xi-facebook"></i></a>
+                            </li>
+                            <li class="sns3">
+                                <a href="" title="네이버-포스트"><i= class="xi-naver"></i></a>
+                            </li>
+                        </ul>
+                    </nav>
+                </ul>
+                <p class="copyright">Copyright © NCSOFT All rights reserved</p>
+            </div>
+  
+        <footer>
+
+        </footer>
+
+
+    </div>
+</body>
+</html>

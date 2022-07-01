@@ -1,0 +1,21 @@
+초기화
+margin : 0; padding : 0;
+body, html { width : 100%;
+ul { line-style : none;(밑줄제거)
+a { text-decroation : none;(밑줄제거)  } 
+
+
+
+
+순서
+
+wrap { clear : both; } -> hd { clear : both; } -> hd_wrap { width : 1200px; margin : 0 auto; }(가운데로 몰기)
+-> logo { display : block; width&height조정; float : left(형제끼리만 검) } (로고 크기 조절)
+
+
+
+float : left = 왼쪽으로 가게함(형제끼리만)
+margin-left = 왼쪽 띄워짐
+margin-top = 상단 띄워짐
+
+display : block = 인라인 요소를 블록 방식으로 변경(css가능하게끔)

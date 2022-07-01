@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/favicon.ico">
+    <link rel="apple-touch-icon" href="./img/favicon.ico">
+    <!--<link rel="shortcut icon" href="">-->
+    <!--<link rel="apple=touch icon" href="">-->
+    <!--검색(메타) 정보-->
+    <meta name="url" content="https://www.samsungdisplay.co.kr">
+    <meta name="title" content="르노자동차">
+    <meta name="description" content="르노자동차의 기업정보,제품정보,미디어,커뮤니티">
+    <meta name="keywords" content="르노자동차,자동차">
+    <!--오픈 그래프-->
+    <meta property="og:url" content="https://www.samsungdisplay.co.kr">
+    <meta property="og:title" content="르노자동차">
+    <meta property="og:description" content="르노자동차의 기업정보,제품정보,미디어,커뮤니티">
+    <meta property="og:image" content="./img/logo-square-letter.png">
+    <title>르노코리아자동차</title>
+    <!--기본 플로그인 연결-->
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <!--웹 폰트/폰트 연결-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'scB';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/SuncheonB.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        } 
+        @font-face {
+            font-family: 'ROKAF';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts2201-3@1.0/ROKAFSlabSerifBold.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }   
+    </style>
+    <!-- 웹 아이콘 연결 -->
+    <!-- XEIcon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <!-- 스타일 초기화 모듈 연결 -->
+    <!-- <link rel="stylesheet" href="./css/reset.css"> -->
+    <link rel="stylesheet" href="./css/normalize.css">
+    <style>
+        /* font-family: 'Noto Sans KR', sans-serif;  */
+        /* 내게 필요한 스타일 초기화 */
+        * { margin: 0; padding: 0; }
+        body, html { font-family: 'Noto Sans KR', sans-serif; width: 100%; } 
+        ul { list-style: none; } 
+        a { text-decoration: none; color: #333; }
+    
+        /*.vs_tit { font-family: 'scB'; } */
+        .vs_com { font-family: 'Nanum Gothic', sans-serif; } 
+        i[class*='xi'] { font-size:28px; color:#000; }
+        i[class*='xi']:hover { color:rgb(226, 55, 25); }
+    
+        .wrap { clear:both; width: 100%; }
+        #hd { clear:both; width: 100%;  }
+        .hd_wrap { clear:both; width: 1280px; margin: 0 auto; }
+        .logo { display:block; width: auto; float:left; margin-top: 20px;}
+        .logo img { display:block; width: 100%; }
+        #gnb { float:left; }
+        #gnb > ul > li { float:left; padding-left: 50px; padding-right: 20px; position: relative; }
+        #gnb > ul > li > span { display:block; line-height: 80px; cursor:pointer; }
+        #gnb ul li .sub { display: none; position: absolute; left: 10px; top: 80px; z-index: 999;
+        padding-left: 10px; width: 160px; height: 200px; background-color: aliceblue; }
+        #gnb ul li .sub li { line-height: 38px; }
+        #gnb ul li:hover .sub { display: block; }
+        #gnb ul li:hover span { color: cornflowerblue; } 
+
+        #tnb { float:right; line-height: 80px;}
+        #tnb a { font-size: 0.85em; padding-left: 30px; }
+        #tnb a:hover { color: darksalmon; text-decoration: underline;}
+
+        #content { clear:both; width: 100%; }
+        #vs { width: 100%; overflow-x: hidden; }
+        .img_box { width: 400%; }
+        .img_box li { float: left; width: 25%; position: relative;}
+        .img_box li a { display: block; }
+        .img_box li a img { display: block; width: 100%; height: auto;}
+        .img_box .tit_box {position: absolute; top: 50px; left: 50px; color: #fff;
+        text-shadow: 1px 1px 1px #333; padding-left: 40px;}
+        .vs_tit { font-size: 45px; line-height: 1.6; }
+        .vs_com { font-size: 16px; padding-top: 40px;}
+
+        #ft { clear:both; width: 100%; }
+    
+        </style>
+</head>
+<body>
+    <div class="wrap">
+        <header id="hd">
+        <!--(a.logo>img)+(nav#gnb>ul>li*5>span+(ul.sub>li*4>a{메뉴$}))+(p#tnb>a{상단$}*3)-->
+            <div class="hd_wrap">
+                <a href="" class="logo">
+                    <img src="./Img/logo.png" alt="르노코리아자동차 로고">
+                </a>
+                <nav id="gnb">
+                    <ul>
+                        <li>
+                            <span>MODEL</span>
+                            <ul class="sub">
+                                <li><a href="">전체모델보기</a></li>
+                                <li><a href="">모델비교</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>BUY</span>
+                            <ul class="sub">
+                                <li><a href="">내 차 만들기 & 견적</a></li>
+                                <li><a href="">구매절차 안내</a></li>
+                                <li><a href="">맞춤형 금융계산기</a></li>
+                                <li><a href="">이달의 구매 혜택</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>SERVICE</span>
+                            <ul class="sub">
+                                <li><a href="">care service</a></li>
+                                <li><a href="">온라인 정비예약</a></li>
+                                <li><a href="">멤버십 서비스</a></li>
+                                <li><a href="">MY 르노코리아 앱</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>INSIDE</span>
+                            <ul class="sub">
+                                <li><a href="">뉴스</a></li>
+                                <li><a href="">이벤트</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>MY르노코리아</span>
+                            <ul class="sub">
+                                <li><a href="">회원정보 관리</a></li>
+                                <li><a href="">MY 혜택</a></li>
+                                <li><a href="">내 차 관리</a></li>
+                                <li><a href="">정비예약 신청/조회</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <p id="tnb">
+                    <a href="">로그인</a>
+                    <a href="">사이트맵</a>
+                    <a href="">오시는길</a>
+                </p>
+            </div>
+        </header>
+        <div id="content">
+            <!-- div#figure#vs>(ul.img_box>li*4>a>img+(div.tit_box>h2.vs_tit{배너제목$}+p.vs_com{배너설명}))+(div.btn_group>button.prev{이전}+button.next_btn{다음}) -->
+            <div id="vs">
+                <ul class="img_box">
+                    <li>
+                        <a href="">
+                            <img src="./Img/premiere_img01.jpg" alt="메인비주얼" class="pic">
+                            <div class="tit_box">
+                                <h2 class="vs_tit">메인비주얼1</h2>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./Img/premiere_img02.jpg" alt="메인비주얼" class="pic">
+                            <div class="tit_box">
+                                <h2 class="vs_tit">메인비주얼2</>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./Img/premiere_img03.jpg" alt="메인비주얼" class="pic">
+                            <div class="tit_box">
+                                <h2 class="vs_tit">메인비주얼3</h2>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./Img/premiere_img04.jpg" alt="메인비주얼" class="pic">
+                            <div class="tit_box">
+                                <h2 class="vs_tit">메인비주얼4</h2>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <footer id="ft">
+            <div class="ft_wrap">
+                <nav class="fnb">
+                    <a href="">개인정보처리방침</a>
+                    <a href="">이용약관</a>
+                    <a href="">채용공고</a>
+                    <a href="">전문영업인위촉</a>
+                </nav>
+                <nav class="snb">
+                    <ul>
+                        <li class="sns1"><a href="" title="페이스북"></a></li>
+                        <li class="sns2"><a href="" title="유튜브"></a></li>
+                        <li class="sns3"><a href="" title="네이버 포스트"></a></li>
+                        <li class="sns3"><a href="" title="인스타그램"></a></li>
+                    </ul>
+                </nav>
+                <p class="copyright">Copyright © 2022 RENAULT KOREA MOTORS. ALL RIGHTS RESERVED</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

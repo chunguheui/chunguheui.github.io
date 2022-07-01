@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/favicon.ico">
+    <link rel="apple-touch-icon" href="./img/favicon.ico">
+    <!--검색(메타) 정보-->
+    <meta name="url" content="https://www.samsungdisplay.co.kr">
+    <meta name="title" content="르노코리아자동차">
+    <meta name="description" content="르노코리아자동차 기업정보,제품정보,미디어,커뮤니티">
+    <meta name="keywords" content="르노코리아자동차,자동차">
+    <!--오픈 그래프-->
+    <meta property="og:url" content="https://www.samsungdisplay.co.kr">
+    <meta property="og:title" content="르노코리아자동차">
+    <meta property="og:description" content="르노코리아자동차 기업정보,제품정보,미디어,커뮤니티">
+    <meta property="og:image" content="./img/logo-square-letter.png">
+    <title>르노코리아자동차</title>
+    <!--기본 플로그인 연결-->
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <!--웹 폰트/폰트 연결-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'scB';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/SuncheonB.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        } 
+        @font-face {
+            font-family: 'ROKAF';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts2201-3@1.0/ROKAFSlabSerifBold.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }   
+    </style>
+  
+    <!-- 웹 아이콘 연결 -->
+    <!-- XEIcon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <!-- 스타일 초기화 모듈 연결 -->
+    <!-- <link rel="stylesheet" href="./css/reset.css"> -->
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="common.css">
+    <style>
+         /* 메인 비주얼 */   
+        #vs { width: 100%; overflow-x: hidden; position: relative;}
+        .img_box { width: 400%; }
+        .img_box li { float: left; width: 25%; position: relative;}
+        .img_box li a { display: block; }
+        .img_box li a img { display: block; width: 100%; height: auto; }
+        .img_box .tit_box {position: absolute; top: 50px; left: 50px; color: #fff; text-shadow: 1px 1px 1px #333; padding-left: 40px; z-index: 30;}
+
+        .btn_group { position:absolute; bottom:0px; left:90px; z-index:40; }
+        .btn_group button { display:block; width: 80px; height: 80px; float:left; background-color:rgba(0,0,0,0.6); border:none; outline: none; color:#fff; }
+        .btn_group button i[class*='xi'] { color: #fff; }
+        .btn_group button:hover i[class*='xi'] { cursor:pointer; color:gold; }
+        
+        /* 그리드 박스 */
+        .grid_box { clear: both; width: 100%;}
+        .grid_wrap { clear: both; widows: 100%; }   
+        .grid_wrap li { float: left; height: 16.66667vw; background-position: center center; }
+        .grid_wrap li.item1 { background-color: #d0dee8; }    
+        .grid_wrap li.item2 { background-color: #e5edf3; }
+        .grid_wrap li.item3 { background-color: #d0dee8; }
+        .grid_wrap li.item4 { background-color: #e5edf3; }
+        .grid_wrap li.item5 { background-image: url("/chung/project/Img/grid1.png"); background-repeat: no-repeat;  background-color: #d0dee8; }
+        .grid_wrap li.item6 { background-image: url("/chung/project/Img/grid2.png"); background-repeat: no-repeat; background-color: #e5edf3; }
+
+        /* 그리드 */               
+        .col1 { width: 8.33333%; }
+        .col2 { width: 16.66667%; }
+        .col3 { width: 25%; }
+        .col4 { width: 33.33333%; }
+        .col5 { width: 41.66667%; }
+        .col6 { width: 50%; }
+        .grid_wrap li a { display:block; padding: 28px; }
+        .col_tit, .col_com { color:#000; }
+        .col_tit { padding-top: 5px; }
+        .col_tit.w , .col_com.w { color:#fff; text-shadow:1px 1px 1px #333; }
+        .col_tit.w { padding-top: 0; }
+        .arrow { display:block; margin-top: 50px; }
+        .arrow:before { content:""; display:block; width:2px; height: 3px; border-bottom: 1px solid #555; float:left; transition:0.4s; }
+        .arrow:after { content:""; display:block; width:50px; height: 8px; background-image: url("./Img/arrow_black.png"); float:left; background-repeat: no-repeat; }
+        .col_com { font-size:12px; padding-top: 20px; font-weight: 200;  }
+        .grid_wrap li:hover a .arrow:before { width: 18px;  }
+
+        /* 콘텐츠 영역 */   
+        #content { clear:both; width: 100%; }
+        .page { clear: both; width: 100%; }
+        .sub_ban { clear: both; width: 100%; }
+        .sub_ban img { display: block; width: 100%; }
+        .bread_box { clear: both; width: 100%; border-top: 2px solid #eee; border-bottom: 2px solid #eee; }
+        .bread_wrap { clear: both; width: 1200px; margin: auto; height: 40px; padding-top: 1em; padding-bottom: 1em; line-height: 40p; font-size: 18px;}    
+        .bread_wrap a { padding-right: 10px;}
+        .bread_wrap a:after { content: ">"; padding-left: 10px; }
+        .sel option { font-size: 18px; }
+        .con_wrap { clear: both; width: 100%; }
+        .page_wrap { clear: both; width: 1200px; margin: 0 auto; }
+        .page_tit { font-size: 40px; line-height: 2.4; padding-top: 1em; padding-bottom: 0.5em; }
+        .page:target { display: block; }
+        
+        /* 내부테이블 영역 */
+        .sec_tit { text-align: center; font-size: 30px; line-height: 2.4; padding-top: 1em; padding-bottom: 0.25em; }
+        .tb1 { display:table; width: 800px; margin: 0 auto; border-collapse: collapse; margin-bottom: 50px; }
+        .tb1 tr { display:table-row; }
+        .tb1 th, .tb1 td { display:table-cell; line-height:32px; border-bottom:1px solid #333; font-size:14px;  }
+        .tb1 th { border-top:2px solid #333; background-color: #eee; }    
+        .tb1 .c1 { width:80px; text-align:center; }
+        .tb1 .c3, .tb1 .c4 { width:100px; text-align:center; border-left:1px solid #333; }
+        .tb1 .c2 { border-left:1px solid #333; }
+        .tb1 td.c2 { text-align: left;  }
+        .tb1 td.c2 a { padding-left:1em; }
+        .tb1 td.c2 a:hover { color:deepskyblue; font-weight:bold; }
+        .tb1 tr:last-child td { border-bottom:2px solid #333; }
+        /*
+    #page2 .tit_box { text-align:right; }    
+    .sec_tit { font-size: 42px;    font-weight: 700;    line-height: 1.64;
+    letter-spacing: -0.03em; padding-top: 2em; padding-bottom: 1em; }
+    .tb1 { display:table; width: 100%; border-collapse: collapse; margin-bottom: 28px; }
+    .tb1 tr { display:table-row; }
+    .tb1 td, .tb1 th { display:table-cell; border-bottom:1px solid #666; 
+    line-height: 3.6; }
+    .tb1 tr:first-child th, .tb1 tr:first-child td { border-top:1px solid #666; }
+    .tb1 th { background-color: #f6f5f4; width: 200px; font-weight:600; color:#222; }
+    .tb1 td { color:#666; font-weight: 400; padding-left: 2em; }
+    .para1 { padding-top: 2em; padding-bottom: 1em;  line-height: 2; font-size:18px; }
+    .para2 { padding-top: 2em; padding-bottom: 1em;  line-height: 2; font-size:18px; 
+    font-weight: 700; }
+        */
+        .col_grid_lst { clear:both; }
+    .col_grid_lst li { float: left; margin-right:53px; margin-bottom:53px; }
+    .col_grid_lst li:nth-child(4n) { margin-right: 0; }
+    .col_grid_box, .col_grid_cate_box { width: 280px; height: 280px; 
+    background-repeat: no-repeat; background-position:center center; color:#fff; 
+    box-sizing: border-box; }
+    .col_grid_box { font-size: 20px; text-align: center; padding-top:2.4em; }
+    .col_grid_cate_box { background-color: #0551a0; font-size:32px; line-height:280px;
+    text-align: center; }
+    .col_grid_box.item1 { background-image: url("./img/oled_list01.jpg"); }
+    .col_grid_box.item2 { background-image: url("./img/oled_list02.jpg"); }
+    .col_grid_box.item3 { background-image: url("./img/oled_list03.jpg"); }
+    .col_grid_box.item4 { background-image: url("./img/oled_list04.jpg"); }
+    .col_grid_box.item5 { background-image: url("./img/oled_list05.jpg"); }
+    .col_grid_box.item6 { background-image: url("./img/oled_list06.jpg"); }
+    .col_grid_box.item7 { background-image: url("./img/qd_list01.jpg"); }
+    .col_grid_box.item8 { background-image: url("./img/qd_list02.jpg"); }
+
+    .year_lst { clear:both; width: 1200px; }
+    .year_lst li { width: 600px; float:left; padding:3.6em; min-height:520px;
+    box-sizing: border-box; overflow-x:hidden; }
+    .year_lst li:nth-child(2n+1) { clear:both; }
+    .year_lst li img { display:block;  }
+    .year_lst li:nth-child(4n) img { float:right; }
+    .month_para { padding-top: 0.8em; padding-bottom:0.8em; font-size:16px; 
+    padding-left:3em; text-indent:-2em; }
+    .month_para::first-letter { font-weight:700; }
+
+    .sec_img { clear:both; display:block; width: 1280px; margin:14px auto; }
+    .thumb_lst { clear:both; width: 1200px; overflow:hidden; margin-top: 50px; }
+    .thumb_lst li { float:left; padding-top:3em; width: 560px; margin-right: 80px;
+    padding-bottom: 2.4em; min-height:150px; background-repeat: no-repeat;
+    background-position: right center; box-sizing:border-box; border-top:1px solid #999; }
+    .thumb_lst li.item1 { background-image: url("./img/f01-loc-01.jpg"); }
+    .thumb_lst li.item2 { background-image: url("./img/f01-loc-02.jpg"); }
+    .thumb_lst li.item3 { background-image: url("./img/f01-loc-03.jpg"); }
+    .thumb_lst li.item4 { background-image: url("./img/f01-loc-04.jpg"); }
+    .thumb_lst li.item5 { background-image: url("./img/f01-loc-07.jpg"); }
+    .thumb_lst li.item6 { background-image: url("./img/f01-loc-08.jpg"); }
+    .thumb_lst li.item7 { background-image: url("./img/f01-loc-09.jpg"); }
+    .thumb_lst li.item8 { background-image: url("./img/f01-loc-10.jpg"); }
+
+    .thumb_lst li:nth-child(2n) { margin-right: 0; }
+    .thumb_txt_box { float:left; max-width:70%; }
+    .thumb_tit { font-size:26px; color:#0f0f0f; line-height: 1; font-weight: 700; 
+    letter-spacing:-0.1em; padding-bottom: 0.5em; }
+    .thumb_com { font-size:16px; color:#666; font-weight: 300; padding-bottom: 2em; }
+    .thumb_tel { font-size:20px; color:#666; font-weight: 300; }
+    
+        /* 테이블 게시판 영역 */
+        .tb2 { display:table; width: 100%; border-collapse: collapse; margin-bottom: 28px; margin: 0 auto; margin-bottom: 50px;}
+        .tb2 tr { display:table-row; }
+        .tb2 th, .tb2 td { display: table-cell; border-bottom: 1px solid #333; line-height: 40px;} 
+        .tb2 .d1, .tb2 .d3 { background-color: #eee }
+        .tb2 td { padding-left: 1em; }
+        .tb2 tr:first-child th, .tb2 tr td:first-child td { border-top: 2px solid #333; }
+        
+        /* ul>li 게시판 영역 */
+        .tb3 { display: table; width: 700px; margin: 0 auto; margin-bottom: 80px; }
+        .tb3 .tr { display: table-row; }
+        .tb3 .th, .tb3 .td { display: table-cell; border-bottom: 2px solid darkorchid; line-height: 70px;}
+        .tb3 .tr:first-child .th, .tb3 .tr:first-child .td { border-top: 3px solid deepskyblue; }
+        .tb3 .th { text-align: center; font-weight: bold; }
+        .tb3 .td { padding-left: 20px; }
+        .tb3 .tr:last-child .th, .tb3 .tr:last-child .td { border-bottom:  3px solid deeppink;}
+        .tb3 .th.e1, .tb3 .td.e2, .tb3 .th.e3 { border-right: 1px solid #333;  }
+        
+        /* 썸네일 목록1 */
+        .lst1 { clear: both; width: 1200px; margin: 0 auto;}
+        .lst1:after { content: ""; display: block; width: 100%; clear: both;}
+        .lst1 li { float: left; width: 300px; height: 300px; overflow: hidden; box-sizing: border-box; }
+        .lst1 li.tit { background-color: antiquewhite; color: #333; font-size: 80px; text-align: center; line-height: 300px; font-weight: bold; } 
+
+        /* 썸네일 목록2 */
+        .lst2 { clear: both; width: 1260px; margin: 0 auto; margin-bottom: 100px; }
+        .lst2:after { content: ""; display: block; width: 100%; clear: both; }
+        .lst2 li { width: 400px; height: 400px; float: left; margin-right: 30px; overflow: hidden; box-sizing: border-box; background-repeat: no-repeat; 
+        background-position: center center; background-size: 100% 100%; }
+
+        .lst2 li:nth-child(3n){ margin-right: 0; }   /* 리스트 아이템1~9 주고 마지막에 */
+
+        .lst2 li.item1 { background-image: url("oled_list01.jpg"); }
+        .lst2 li.item2 { background-image: url("oled_list02.jpg"); }
+        .lst2 li.item3 { background-image: url("oled_list03.jpg"); }
+        .lst2 li.item4 { background-image: url("oled_list04.jpg"); }
+        .lst2 li.item5 { background-image: url("oled_list05.jpg"); }
+        .lst2 li.item6 { background-image: url("oled_list06.jpg"); }
+
+        /* 아이콘 리스트1 이미지*/
+        .lst3 { clear: both; width: 360px; margin: 0 auto; margin-bottom: 100px; }
+        .lst3:after { content: ""; display: block; width: 100%; clear: both; }
+        .lst3 li { float: left; width: 60px; height: 60px; line-height: 60px; text-align: center;}
+
+        /* 아이콘 리스트2 백그라운드이미지*/
+        .lst4 { clear: both; width: 360px; margin: 0 auto; margin-bottom: 100px; }
+        .lst4:after { content: ""; display: block; width: 100%; clear: both; }
+        .lst4 li { float: left; width: 60px; height: 60px; line-height: 60px; text-align: center; background-position: center center; background-repeat: no-repeat;}
+        .lst4 li.item1 { background-image: url("icon01.png"); }
+        .lst4 li.item2 { background-image: url("icon02.png"); }
+        .lst4 li.item3 { background-image: url("icon03.png"); }
+        .lst4 li.item4 { background-image: url("icon04.png"); }
+        .lst4 li.item5 { background-image: url("icon05.png"); }
+        .lst4 li.item6 { background-image: url("icon06.png"); } 
+
+        /* 아이콘(셋) 리스트3 --- 대세야~~~!!! */
+        .lst5 { clear: both; width: 240px; margin: 0 auto; margin-bottom: 100px; }
+        .lst5:after { content: ""; display: block; width: 100%; clear: both; }
+        .lst5 li { float: left; width: 40px; height: 40px; line-height: 40px; text-align: center; background-repeat: no-repeat; background-image: url("Img/iconset.png");}
+        .lst5 li.item1 { background-position: 0 0; }
+        .lst5 li.item2 { background-position: -40px 0; }
+        .lst5 li.item3 { background-position: 0px -40px; }
+        .lst5 li.item4 { background-position: -80px -40px; }
+        .lst5 li.item5 { background-position: -80px -80px; }
+        .lst5 li.item6 { background-position: -40px -80px; }
+        </style>
+</head>
+<body>
+    <div class="wrap">
+        <header id="hd">
+        <!--(a.logo>img)+(nav#gnb>ul>li*5>span+(ul.sub>li*4>a{메뉴$}))+(p#tnb>a{상단$}*3)-->
+            <div class="hd_wrap">
+                <a href="" class="logo">
+                    <img src="./Img/logo.png" alt="르노코리아자동차 로고">
+                </a>
+                <nav id="gnb">
+                    <ul>
+                        <li>
+                            <span><a href="index.html">MODEL</a></span>
+                            <ul class="sub">
+                                <li><a href="">전체모델보기</a></li> 
+                                <li><a href="">모델비교</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>BUY</span>
+                            <ul class="sub">
+                                <li><a href="">내 차 만들기 & 견적</a></li>
+                                <li><a href="">구매절차 안내</a></li>
+                                <li><a href="">맞춤형 금융계산기</a></li>
+                                <li><a href="">이달의 구매 혜택</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>SERVICE</span>
+                            <ul class="sub">
+                                <li><a href="">care service</a></li>
+                                <li><a href="">온라인 정비예약</a></li>
+                                <li><a href="">멤버십 서비스</a></li>
+                                <li><a href="">MY 르노코리아 앱</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>INSIDE</span>
+                            <ul class="sub">
+                                <li><a href="">뉴스</a></li>
+                                <li><a href="">이벤트</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>MY르노코리아</span>
+                            <ul class="sub">
+                                <li><a href="">회원정보 관리</a></li>
+                                <li><a href="">MY 혜택</a></li>
+                                <li><a href="">내 차 관리</a></li>
+                                <li><a href="">정비예약 신청/조회</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <p id="tnb">
+                    <a href="">로그인</a>
+                    <a href="">사이트맵</a>
+                    <a href="">오시는길</a>
+                </p>
+            </div>
+        </header>
+        <div id="content">
+            <div class="content_wrap">
+            <section id="page1" class="page">
+                <figure class="sub_ban">
+                    <img src="./Img/model_sub.jpg" alt="서브배너">
+                    <div class="tit_box">
+                        <h2 class="sub_tit">CEO 인사말</h2>
+                        <p class="sub_com">인간의 삶에 가치를 더하고 인류의 삶에 공헌하는 글로벌 초일류기업으로 항상 여러분과 함께 하겠습니다.</p>
+                    </div>
+                </figure>
+                <div class="bread_box">
+                    <div class="bread_wrap">
+                    <ul class="bread">
+                        <li class="item1">
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li class="item2">MODEL</li>
+                        <li class="item3">
+                            <select name="sel" id="sel" class="sel">
+                                <option value="model.html#page1" selected>전체모델보기</option>
+                                <option value="model.html#page2">모델비교</option>
+                            </select>
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+                <div class="page_con">
+                    <div class="page_wrap">
+                        <h2 class="sec_tit">기업 정보</h2>
+                        <table class="tb1">
+                            <tbody>
+                                <tr>
+                                    <th>기업명</th>
+                                    <td>삼성디스플레이</td>
+                                    <th>대표이사</th>
+                                    <td>최주선</td>
+                                </tr>
+                                <tr>
+                                    <th>설립일</th>
+                                    <td>2012.04.03</td>
+                                    <th>업종</th>
+                                    <td>디스플레이 패널</td>
+                                </tr>
+                                <tr>
+                                    <th>본사소재</th>
+                                    <td>경기도 용인시 기흥구 삼성로1</td>
+                                    <th>종업원수</th>
+                                    <td>22,4444</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="para1">
+                            삼성디스플레이는 2012년 OLED와 LCD의 합병으로 사업의 시너지를 극대화했으며, 독보적인 기술을 바탕으로 스마트폰, 노트북, 모니터, TV 등에 프리미엄 디스플레이 제품을 공급하고 있습니다. 세계 최초로 플렉서블 OLED와 폴더블 디스플레이를 양산하는 등 상상 속에만 존재하던 디스플레이를 현실로 만들어 가고 있습니다. 그리고 대형 디스플레이 시장의 판도를 뒤집을 QD 디스플레이라는 새로운 도전을 시작하고 있습니다.
+                        </p>
+                        <p class="para1">
+                            삼성디스플레이는 자연을 그대로 담아내는 뛰어난 화질, 더욱 가볍고 얇은 디스플레이를 만드는 기술로 고객이 필요로 하는 토털 솔루션을 제공하고 있습니다. 다양한 디자인 혁신과, 120Hz 고주사율, 그리고 저전력 구동으로 5G 시대에 가장 알맞은 디스플레이, 고객의 건강까지 고려하는 블루라이트 저감 기술 등 압도적인 초격차 기술 개발로 고객에게 새로운 가치를 제공합니다.
+                        </p>
+                        <p class="para1">
+                            글로벌 1위로서 시장을 이끌어 온 삼성디스플레이는 앞선 기술과 제품, 그리고 고객의 신뢰를 바탕으로 앞으로도 디스플레이 리더로서의 역할을 다할 것입니다.
+                        </p>
+                    </div>
+                    <div class="page_wrap">
+                        <h2 class="sec_tit">사업 영역</h2>
+                        <ul class="col_grid_lst">
+                            <li class="col_grid_cate">
+                                <div class="col_grid_cate_box">
+                                    <h3 class="col_grid_cate_tit">OLED</h3>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="col_grid_box item1">
+                                    <h3 class="col_grid_tit">스마트폰</h3>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="col_grid_box item2">
+                                    <h3 class="col_grid_tit">태블릿</h3>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="col_grid_box item3">
+                                    <h3 class="col_grid_tit">노트북</h3>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="col_grid_box">
+                                    <h3 class="col_grid_tit"></h3>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="col_grid_box item4">
+                                    <h3 class="col_grid_tit">IT</h3>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="col_grid_box item5">
+                                    <h3 class="col_grid_tit">웨어러블</h3>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="col_grid_box item6">
+                                    <h3 class="col_grid_tit">Automotive</h3>
+                                </div>
+                            </li>
+                            <li class="col_grid_cate">
+                                <div class="col_grid_cate_box">
+                                    <h3 class="col_grid_cate_tit">QD</h3>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="col_grid_box item7">
+                                    <h3 class="col_grid_tit">TV</h3>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="col_grid_box item8">
+                                    <h3 class="col_grid_tit">모니터</h3>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="page" id="page2">
+                <figure class="sub_ban">
+                    <img src="./img/company2_1.jpg" alt="CEO 인사말">
+                    <div class="tit_box">
+                        <h2 class="sub_tit">CEO 인사말</h2>
+                        <p class="sub_com">인간의 삶에 가치를 더하고 인류의 삶에 공헌하는 글로벌 초일류기업으로 항상 여러분과 함께 하겠습니다.</p>
+                    </div>
+                </figure>
+                <div class="bread_box">
+                    <div class="bread_wrap">
+                        <ul class="bread">
+                            <li class="item1">
+                                <a href="index" class="home">HOME</a>
+                            </li>
+                            <li class="item2">기업정보</li>
+                            <li class="item3">
+                                <select name="sel" id="sel2" class="sel">
+                                    <option value="company.html#page1">기업개요</option>
+                                    <option value="company.html#page2" selected>CEO 인사말</option>
+                                    <option value="company.html#page3">연혁</option>
+                                    <option value="company.html#page4">사업장 정보</option>
+                                    <option value="company.html#page5">전자공고</option>
+                                </select>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="page_con">
+                    <div class="page_wrap">
+                        <h2 class="sec_tit">무한한 확장성을 가진 디스플레이 기술로 세상을 바꾸고 우리의 삶에<br> 새로운 가치를 더하겠습니다.</h2>
+                        <p class="para2">안녕하세요. 삼성디스플레이 대표이사 최주선입니다.</p>
+                        <p class="para1">‘디스플레이’는 기술을 넘어 사람과 사람, 사람과 세상을 연결하는 ‘창’입니다. 4차 산업혁명이라는 거대한 물결 속에서 5G 이동통신을 기반으로 하는 IoT가 현실이 되면 우리를 둘러싼 세상은 아주 빠른 속도로 변화할 것입니다.</p>
+                        <p class="para1">흑백에서 컬러TV로, CRT에서 평판 디스플레이로, 피처폰에서 스마트폰으로 진화했을 때처럼 기술의 변화가 우리의 생활방식과 사회의 문화를 완전히 바꾸어 놓을 것입니다. 그때가 되면 인터넷을 통해 연결된 세상을 보다 생생하게 경험할 수 있도록 모든 제품, 모든 공간에 삼성디스플레이의 최첨단 미래 기술이 함께할 것입니다.</p>                                
+                        <p class="para1">보다 큰 화면과 실제처럼 선명하고 생동감 넘치는 화질, 어떤 정형화된 형태가 아닌 새로운 디자인의 디스플레이가 우리의 시선이 닿는 모든 곳에서 새로운 세상을 보여줄 것입니다. 삼성디스플레이는 앞으로도 기술로 세상을 바꾸고 기술로 삶에 새로운 가치를 더하는 글로벌 초일류 기업으로 더 높이 성장하겠습니다.</p>
+                        <p class="para1">감사합니다.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="page" id="page3">
+                <figure class="sub_ban">
+                    <img src="./img/company3.jpg" alt="연혁">
+                    <div class="tit_box">
+                        <h2 class="sub_tit">연혁</h2>
+                        <p class="sub_com">세계 디스플레이 역사의 한 가운데 삼성디스플레이가 있습니다.</p>
+                    </div>
+                </figure>
+                <div class="bread_box">
+                    <div class="bread_wrap">
+                        <ul class="bread">
+                            <li class="item1">
+                                <a href="index" class="home">HOME</a>
+                            </li>
+                            <li class="item2">기업정보</li>
+                            <li class="item3">
+                                <select name="sel" id="sel3" class="sel">
+                                    <option value="company.html#page1">기업개요</option>
+                                    <option value="company.html#page2">CEO 인사말</option>
+                                    <option value="company.html#page3" selected>연혁</option>
+                                    <option value="company.html#page4">사업장 정보</option>
+                                    <option value="company.html#page5">전자공고</option>
+                                </select>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="page_con">
+                    <div class="page_wrap">
+                        <ul class="year_lst">
+                            <li><img src="./img/2021_1.jpg" alt="2021"></li>
+                            <li>
+                                <p class="month_para">
+                                    2월 -RBA(Responsible Business Alliance) 가입<br>
+                                    글로벌 안전 인증 회사인 UL로부터 우수한 <br>'야외 시인성(Sunlight Visibility)' 인증                                        
+                                </p>
+                                <p class="month_para">
+                                    4월 -갤럭시 노트20 패널 환경성적표지 인증 획득
+                                </p>
+                                <p class="month_para">
+                                    5월 -'초고해상도 산화물 TFT 개발' 국책과제 주관기업 선정<br>
+                                    삼성 노트북 OLED, 우수한 게임 화질로 SGS 인증
+                                </p>
+                                <p class="month_para">
+                                    6월 -2021 지속가능경영 보고서 발간
+                                </p>
+                                <p class="month_para">
+                                    7월 -가락바위 저수지 친환경 '생태 식물섬' 조성
+                                </p>
+                                <p class="month_para">                                        8월 -편광판 기능을 내재화한 'Eco² OLED™' 적용
+                                    10월 -디스플레이 업계 최초 'ISO 22301' 인증 획득
+                                </p>
+                                <p class="month_para">11월 -QD Display 제품 양산·출하</p>
+                            </li>
+                            <li>
+                                <p class="month_para">2월 -폴더블용 UTG 기술 상용화<br>
+                                    세계 최초 27인치 QHD Real 1ms 게이밍 모니터 개발
+                                </p>
+                                <p class="month_para">
+                                    7월 -QD 설비 반입 시작
+                                </p>
+                                <p class="month_para">8월 -어댑티브 프리퀀시(Adaptive Frequency)
+                                    <br>기술 상용화</p>
+                                <p class="month_para">9월 -세계 최소 곡률 1.4R 폴더블 OLED 상용화<br>
+                                    폐기물 매립 제로(Zero Waste to Landfill)<br>
+                                    최우수 등급 'Platinum' 획득<br>
+                                    '2019 동반성장지수 평가' 최우수 명예 기업 선정</p>
+                                <p class="month_para">10월 -폴더블 패널 환경성적표지 인증 획득</p>
+                                <p class="month_para">12월 -충남도-아산시와 물 자원 보호 위한 협약 체결</p>
+                            </li>
+                            <li>
+                                <img src="./img/2020_1.jpg" alt="2020">
+                            </li>
+                            <li>
+                                <img src="./img/2019_1.jpg" alt="2019">
+                            </li>
+                            <li>
+                                <p class="month_para">1월 -세계 최초 UHD 해상도 15.6인치 노트북용<br>
+                                    OLED 디스플레이 개발</p>
+                                <p class="month_para">
+                                    2월 -15.6'' UHD OLED 양산<br>
+                                    32:9 49인치 듀얼 QHD 커브드 모니터 개발
+                                </p>
+                                <p class="month_para">3월 -갤럭시 S10 디스플레이 'Excellent A+' 등급 획득</p>
+                                <p class="month_para">4월 -폴더블 디스플레이 양산·출하</p>
+                                <p class="month_para">
+                                    5월 -세계 최초 55인치 QUHD TV 개발<br>
+                                    (65" 136ppi, 55" 160ppi)<br>
+                                    27인치 FHD 240Hz 1500R 커브드 모니터 개발
+                                </p>
+                                <p class="month_para">8월 -갤럭시 노트10/노트10+, 디스플레이 'Excellent A+' 등급 획득<br>UL, 홀(Hole) 디스플레이 업계 최고 인정
+                                </p>
+                                <p class="month_para">10월 -제10회 디스플레이의 날 은탑산업훈장 수상</p>
+                                <p class="month_para">11월 -삼성기술상 우수상 수상 (Hole in Display 제품 양산)<br>폐기물 매립제로 GOLD 인증 획득
+                                </p>
+                                <p class="month_para">12월 -세계 최초 23.6" 1000R Curved 고곡률 모니터 개발<br>무역의 날 국무총리상 수상</p>
+                            </li>
+                            <li>
+                                <p class="month_para">1월 -65인치 UHD 비디오월 생산</p>
+                                <p class="month_para">2월 -갤럭시 S8 패널 환경성적표지 인증 획득</p>
+                                <p class="month_para">3월 -갤럭시 S9 디스플레이 'Excellent A+' 등급 획득</p>
+                                <p class="month_para">5월 -삼성국제기능경기대회 종합우승</p>
+                                <p class="month_para">6월 -세계 최초 8K 120Hz TV 양산<br>82인치 (9월) / 65인치, 75인치 (6월)
+                                </p>
+                                <p class="month_para">7월 -언브레이커블 패널 미국 UL 인증 획득<br>31.5인치 UHD 1800R 커브드 모니터 개발
+                                </p>
+                                <p class="month_para">8월 -AMOLED 누적생산량 20억대 돌파</p>
+                                <p class="month_para">9월 -차량용 E미러 양산</p>
+                                <p class="month_para">10월 -UHD 65인치 비디오월 생산<br>디스플레이의 날 국무총리표창 유공자 포상</p>
+                                <p class="month_para">11월 -삼성기술상 우수상 수상 (폴더블 디스플레이 개발)</p>
+                            </li>
+                            <li><img src="./img/2018_1.jpg" alt="2018"></li>
+                            <li><img src="./img/2017_1.jpg" alt="2017"></li>
+                            <li>
+                                <p class="month_para">1월 -세계 최초 Full Screen AMOLED 양산</p>
+                                <p class="month_para">3월 -SDV V3 설비 반입식</p>
+                                <p class="month_para">5월 -세계 최초 9.1인치 스트레처블 OLED 개발<br>SID 2017 디스플레이 산업상(DIA) 수상<br>무안경 3D OLED 개발</p>
+                                <p class="month_para">6월 -32:9 Curved 모니터 패널 양산<br>세계 최초 차량용 OLED 패널 개발</p>
+                                <p class="month_para">7월 -스마트폰용 트렌치 디스플레이 양산</p>
+                                <p class="month_para">8월 -갤럭시 노트8 디스플레이 'Excellent A+' 등급 획득</p>
+                                <p class="month_para">10월 -디스플레이의 날 유공자 포상 산업포장 수상</p>
+                            </li>
+                            <li>
+                                <p class="month_para">1월 -세계 최초 쿼드 엣지 디스플레이 양산</p>
+                                <p class="month_para">2월 -AMOLED 누적 생산량 10억대 돌파</p>
+                                <p class="month_para">3월 -세계 최초 1800R 커브드 모니터 개발</p>
+                                <p class="month_para">6월 -스마트폰용 OLED 점유율 97.7% 달성</p>
+                                <p class="month_para">7월 -녹색기업 현판 제막식<br>내장형 Y-OCTA 세계 최초 양산</p>
+                                <p class="month_para">8월 -갤럭시 노트7 디스플레이메이트 역대최고 화질등급 인증<br>크레파스, 공정위 '상생협력' 모범 사례 선정</p>
+                                <p class="month_para">9월 -자원순환 선도기업 대상, 대통령상수상</p>
+                                <p class="month_para">10월 -디스플레이의 날 유공자 포상, 대통령 표창</p>
+                                <p class="month_para">12월 -65인치 이상 초대형 LCD 패널 시장 점유율 1위</p>
+                            </li>
+                            <li><img src="./img/2016_1.jpg" alt="2016"></li>
+                            <li><img src="./img/2015_1.jpg" alt="2015"></li>
+                            <li>
+                                <p class="month_para">2월 -세계 최초 듀얼 엣지 디스플레이 양산
+                                <p class="month_para">3월 -세계 최초 3000R 커브드 TV 개발<br>세계 최초 31.5인치 1800R 모니터 양산</p>
+                                <p class="month_para">4월 -업계 최초 CESI(중국전자표준화연구소)<br>곡면디스플레이 성능 테스트 통과<br>A3라인 가동</p>
+                                <p class="month_para">6월 -55인치 미러 OLED 세계 최초 개발,<br>55인치 투명 OLED 세계 최초 개발</p>
+                                <p class="month_para">7월 -SDV 2동 건설 착수</p>
+                                <p class="month_para">9월 -스마트와치용 원형 OLED 양산</p>
+                                <p class="month_para">10월 -세계 최초 상하좌우 Frameless 모니터 개발<br>세계 최초 2000R 커브드 모니터 개발</p>
+                                <p class="month_para">12월 -2015 대한민국 자원봉사대상 행정자치부장관표창 수상</p></p>
+                            </li>
+                            <li>
+                                <p class="month_para">2월 -세계 최초 65인치 UHD 커브드 양산<br>세계 최초 웨어러블 기기용<br>플렉시블 디스플레이 양산</p>
+                                <p class="month_para">4월 -제7회 삼성기능경기대회 종합우승<br>커브드 TV 풀라인업 구축(48/55/65인치)</p>
+                                <p class="month_para">5월 -5.68인치 FHD 커브드 AMOLED 'SID 금상' 수상</p>
+                                <p class="month_para">6월 -세계 최초 QHD-AMOLED 디스플레이 양산</p>
+                                <p class="month_para">8월 -세계 최초 커브드 엣지 디스플레이 양산</p>
+                                <p class="month_para">9월 -A3 설비 반입식</p>
+                                <p class="month_para">10월 -적록색약자를 위한 ‘Vision Aid’ 기술 개발</p>
+                            </li>
+                            <li><img src="./img/2014_1.jpg" alt="2014"></li>
+                            <li><img src="./img/2013_1.jpg" alt="2013"></li>
+                            <li>
+                                <p class="month_para">1월 -85인치 UHD TV 패널 양산,<br>세계 최초 55인치 커브드 OLED 개발</p>
+                                <p class="month_para">5월 -세계 최초 5인치 풀HD 슈퍼AMOLED 개발</p>
+                                <p class="month_para">6월 -ZPD(Zero Pixel Defect) 대형 OLED TV 양산 출하</p>
+                                <p class="month_para">7월 -AMOLED 누적 생산량 4억대 돌파<br>중국 소주모듈법인(SSM) 설립</p>
+                                <p class="month_para">9월 -31.5인치 UHD 모니터 양산<br>98인치 UHD 대형 상업용 디스플레이(LFD) 양산<br>세계 최초 플렉서블 디스플레이 양산</p>
+                                <p class="month_para">10월 -SSL법인 TFT-LCD 8세대 라인 가동<br>YOUM On-Cell Touch AMOLED 양산</p>
+                                <p class="month_para">12월 -소주, 천진, 동관법인 ISO50001 인증 획득</p>
+                            </li>
+                            <li>
+                                <p class="month_para">1월 -55인치 슈퍼AMOLED TV<br>'CES 최고 혁신상' 수상<br>세계 최초 46인치 투명 LCD 양산</p>
+                                <p class="month_para">3월 -아우디 콘셉트카 7.67인치<br>WXGA(1280Ｘ768) OCTA 표준 패널 공급</p>
+                                <p class="month_para">7월 -삼성디스플레이 설립 (SMD, S-LCD 합병)<br>AMOLED 누적 생산 2억대 돌파<br>제1회 삼성디스플레이파트너협회(SDP) 창립총회 개최</p>
+                            </li>
+                            <li><img src="./img/2012_1.jpg" alt="2012"></li>
+                            <li><img src="./img/2011_1.jpg" alt="2011"></li>
+                            <li>
+                                <p class="month_para">3월 -세계 최초 22인치 투명 TFT-LCD 양산</p>
+                                <p class="month_para">5월 -세계 최초 5.5세대 AMOLED라인 가동,<br>SSL법인 LCD FAB 착공</p>
+                                <p class="month_para">6월 -SU Materials(삼성-우베코산) 합작법인 설립<br>AMOLED 누적 판매 1억 대 돌파<br>세계 최대 규모 AMOLED 라인 본격 가동</p>
+                                <p class="month_para">9월 -세계 최초 HD Super AMOLED 개발</p>
+                                <p class="month_para">11월 -중소형 디스플레이 세계1위<br>(점유율 20% 돌파)</p>
+                                <p class="month_para">12월 -천진법인(SDT) 2동 양산 개시</p>
+                            </li>
+                            <li>
+                                <p class="month_para">1월 -세계 최초 3D TV용 240Hz TFT-LCD 양산,<br>세계 최초 14인치 투명 AMOLED 개발</p>
+                                <p class="month_para">2월 -TFT-LCD 누적 판매 5억대 돌파</p>
+                                <p class="month_para">3월 -43인치 슈퍼와이드 TFT-LCD 양산(PID용)</p>
+                                <p class="month_para">5월 -세계 최초 터치일체형 9.7인치 AMOLED 양산<br>세계 최초 19인치 투명 AMOLED 개발</p>
+                                <p class="month_para">6월 -세계 최초 Super AMOLED 개발</p>
+                                <p class="month_para">11월 -세계 최초 70인치 산화물 반도체(Oxide)<br>TFT-LCD 개발,<br>세계 최초 4.5인치 플렉서블 AMOLED 개발</p>
+                                <p class="month_para">12월 -세계 최초 Super PLS 개발<br>AMOLED '대한민국 100대 기술' 선정</p></p>
+                            </li>
+                            <li>
+                                <img src="./img/2010_1.jpg" alt="2010">
+                            </li>
+                        </ul>   
+                    </div>
+                </div>
+            </section>
+            <section class="page" id="page4">
+                <figure class="sub_ban">
+                    <img src="./img/company4.jpg" alt="사업장 정보">
+                    <div class="tit_box">
+                        <h2 class="sub_tit">사업장 정보</h2>
+                        <p class="sub_com">삼성디스플레이의 사업장, 글로벌 네트워크, 연구소 정보입니다.</p>
+                    </div>
+                </figure>
+                <div class="bread_box">
+                    <div class="bread_wrap">
+                        <ul class="bread">
+                            <li class="item1">
+                                <a href="index" class="home">HOME</a>
+                            </li>
+                            <li class="item2">기업정보</li>
+                            <li class="item3">
+                                <select name="sel" id="sel4" class="sel">
+                                    <option value="company.html#page1">기업개요</option>
+                                    <option value="company.html#page2">CEO 인사말</option>
+                                    <option value="company.html#page3">연혁</option>
+                                    <option value="company.html#page4" selected>사업장 정보</option>
+                                    <option value="company.html#page5">전자공고</option>
+                                </select>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="page_con">
+                    <div class="page_wrap">
+                        <h2 class="sec_tit">국내외 사업장</h2>
+                        <img src="./img/f01.jpg" alt="국내외사업장" class="sec_img">
+                        <ul class="thumb_lst">
+                            <li class="item1">
+                                <div class="thumb_txt_box">
+                                    <h3 class="thumb_tit ">기흥캠퍼스(본사)</h3>
+                                    <p class="thumb_com">경기도 용인시 기흥구 삼성로 1</p>
+                                    <p class="thumb_tel">+82 31 5181 1114</p>
+                                </div>
+                            </li>
+                            <li class="item2">
+                                <div class="thumb_txt_box">
+                                    <h3 class="thumb_tit">아산1캠퍼스</h3>
+                                    <p class="thumb_com">충청남도 아산시 탕정면 삼성로 181</p>
+                                    <p class="thumb_tel">+82 41 535 1114</p>
+                                </div>
+                            </li>
+                            <li class="item3">
+                                <div class="thumb_txt_box">
+                                    <h3 class="thumb_tit">아산2캠퍼스</h3>
+                                    <p class="thumb_com">충청남도 아산시 탕정면 삼성로 181</p>
+                                    <p class="thumb_tel">+82 41 623 1114</p>
+                                </div>
+                            </li>
+                            <li class="item4">
+                                <div class="thumb_txt_box">
+                                    <h3 class="thumb_tit">천안캠퍼스</h3>
+                                    <p class="thumb_com">충청남도 천안시 서북구 번영로 465</p>
+                                    <p class="thumb_tel">+82 41 599 1114</p>
+                                </div>
+                            </li>
+                            <li class="item5">
+                                <div class="thumb_txt_box">
+                                    <h3 class="thumb_tit">Samsung Display Tianjin<br>
+                                        (SDT)</h3>
+                                    <p class="thumb_com">No. 25, MipFouch Road, Xiqing District, Tianjin, China</p>
+                                    <p class="thumb_tel">+86 22 2380 8100</p>
+                                </div>
+                            </li>
+                            <li class="item6">
+                                <div class="thumb_txt_box">
+                                    <h3 class="thumb_tit">Samsung Display Dongguan<br>(SDD)</h3>
+                                    <p class="thumb_com">High Tech Industrial Zone, Houjie, Dongguan, Guangdong, China</p>
+                                    <p class="thumb_tel">+86 769 8290 1608</p>
+                                </div>
+                            </li>
+                            <li class="item7">
+                                <div class="thumb_txt_box">
+                                    <h3 class="thumb_tit">Samsung Display Vietnam (SDV)</h3>
+                                    <p class="thumb_com">Yen Phong Industrial Zone, Yen Trung Communes, Yen Phong District, Bac Ninh Province, Vietnam</p>
+                                    <p class="thumb_tel">+84 24 1390 5021</p>
+                                </div>
+                            </li>
+                            <li class="item8">
+                                <div class="thumb_txt_box">
+                                    <h3 class="thumb_tit">SAMSUNG DISPLAY NOIDA PVT.<br>
+                                        LTD. (SDN)</h3>
+                                    <p class="thumb_com">B-1D, Sector-81, Phase II, Noida PIN No. 201305,
+                                        (U.P) India</p>
+                                    <p class="thumb_tel">+91 120 6275500</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="page" id="page5">
+                <figure class="sub_ban">
+                    <img src="./img/company5.jpg" alt="전자공고">
+                    <div class="tit_box">
+                        <h2 class="sub_tit">전자공고</h2>
+                        <p class="sub_com">고객과의 신뢰와 기업의 가치를 높이기 위한 첫걸음으로 정확한 전자공고를 제공합니다.</p>
+                    </div>
+                </figure>
+                <div class="bread_box">
+                    <div class="bread_wrap">
+                        <ul class="bread">
+                            <li class="item1">
+                                <a href="index" class="home">HOME</a>
+                            </li>
+                            <li class="item2">기업정보</li>
+                            <li class="item3">
+                                <select name="sel" id="sel5" class="sel">
+                                    <option value="company.html#page1">기업개요</option>
+                                    <option value="company.html#page2">CEO 인사말</option>
+                                    <option value="company.html#page3">연혁</option>
+                                    <option value="company.html#page4">사업장 정보</option>
+                                    <option value="company.html#page5" selected>전자공고</option>
+                                </select>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="page_con">
+                    <div class="page_wrap">
+                        <h2 class="sec_tit">결산 공고</h2>
+                        <table class="tb2">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>제목</th>
+                                    <th>날짜</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2</td>
+                                    <td><a href="">제10기 결산공고</a></td>
+                                    <td>2022.03.11</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td><a href="">제9기 결산공고</a></td>
+                                    <td>2021.03.16</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br>
+                        <p class="page_nation"><a href="">1</a></p>
+                    </div>
+                </div>
+            </section>
+
+
+
+                <div class="con_wrap">
+                    <div class="page_wrap">
+                        <h2 class="page_tit">페이지1 제목</h2>
+                        <h3 class="sec_tit">내부 테이블 게시판 생성</h3>
+                        <table class="tb1">
+                            <thead>
+                                <tr>
+                                    <th class="c1">번호</th>
+                                    <th class="c2">제목</th>
+                                    <th class="c3">작성자</th>
+                                    <th class="c4">작성일</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="c1">4</td>
+                                    <td class="c2"><a href="">글 제목4</a></td>
+                                    <td class="c3">관리자</td>
+                                    <td class="c4">2022-05-02</td>
+                                </tr>
+                                <tr>
+                                    <td class="c1">3</td>
+                                    <td class="c2"><a href="">글 제목3</a></td>
+                                    <td class="c3">관리자</td>
+                                    <td class="c4">2022-05-02</td>
+                                </tr>
+                                <tr>
+                                    <td class="c1">2</td>
+                                    <td class="c2"><a href="">글 제목2</a></td>
+                                    <td class="c3">관리자</td>
+                                    <td class="c4">2022-05-02</td>
+                                </tr>
+                                <tr>
+                                    <td class="c1">1</td>
+                                    <td class="c2"><a href="">글 제목1</a></td>
+                                    <td class="c3">관리자</td>
+                                    <td class="c4">2022-05-02</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="page_wrap">
+                        <h3 class="sec_tit">테이블 게시판 생성</h3>
+                        <table class="tb2">
+                            <tbody>
+                                <tr>
+                                    <th class="d1">항목명</th>
+                                    <th class="d2">항목데이터</th>
+                                    <th class="d3">항목명</th>
+                                    <th class="d4">항목데이터</th>
+                                </tr>
+                                <tr>
+                                    <th class="d1">항목명</th>
+                                    <th class="d2">항목데이터</th>
+                                    <th class="d3">항목명</th>
+                                    <th class="d4">항목데이터</th>
+                                </tr>
+                                <tr>
+                                    <th class="d1">항목명</th>
+                                    <th class="d2">항목데이터</th>
+                                    <th class="d3">항목명</th>
+                                    <th class="d4">항목데이터</th>
+                                </tr>
+                                <tr>
+                                    <th class="d1">항목명</th>
+                                    <th class="d2">항목데이터</th>
+                                    <th class="d3">항목명</th>
+                                    <th class="d4">항목데이터</th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="page_wrap">
+                        <h3>ul-li 게시판 생성</h3>
+                        <div class="tb3">
+                            <ul class="tr">
+                                <li class="th e1">항목명</li>
+                                <li class="td e2">항목 내용</li>
+                                <li class="th e3">항목명</li>
+                                <li class="td e4">항목 내용</li>
+                            </ul>
+                            <ul class="tr">
+                                <li class="th e1">항목명</li>
+                                <li class="td e2">항목 내용</li>
+                                <li class="th e3">항목명</li>
+                                <li class="td e4">항목 내용</li>
+                            </ul>
+                            <ul class="tr">
+                                <li class="th e1">항목명</li>
+                                <li class="td e2">항목 내용</li>
+                                <li class="th e3">항목명</li>
+                                <li class="td e4">항목 내용</li>
+                            </ul>
+                            <ul class="tr">
+                                <li class="th e1">항목명</li>
+                                <li class="td e2">항목 내용</li>
+                                <li class="th e3">항목명</li>
+                                <li class="td e4">항목 내용</li>
+                            </ul>
+                            <ul class="tr">
+                                <li class="th e1">항목명</li>
+                                <li class="td e2">항목 내용</li>
+                                <li class="th e3">항목명</li>
+                                <li class="td e4">항목 내용</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="page2" class="page">
+                <figure class=""sub_ban><img src="./Img/model_sub02.jpg" alt="서브배너"></figure>
+                <div class="bread_box">
+                    <div class="bread_wrap">
+                     <a href="">Home</a><a href="">메인메뉴</a>
+                     <select name="sel" id="sel">
+                         <option value="model.html#page1">전체모델보기</option>
+                         <option value="model.html#page2" selected>모델비교</option>
+                     </select>
+                    </div>
+                </div>
+        <div class="con_wrap">
+        <div class="page_wrap">
+            <h2 class="page_tit">페이지 제목</h2>
+            <h3 class="sec_tit">썸네일 제목</h3>
+            <ul class="lst1">
+                <li class="tit">썸1</li>
+                <li class="item2"><img src="./Img/oled_list01.jpg" alt=""></li>
+                <li class="item3"><img src="./Img/oled_list02.jpg" alt=""></li>
+                <li class="item4"><img src="./Img/oled_list03.jpg" alt=""></li>
+                <li class="blank_box">썸2</li>
+                <li class="item6"><img src="./Img/oled_list04.jpg" alt=""></li>
+                <li class="item7"><img src="./Img/oled_list05.jpg" alt=""></li>
+                <li class="item8"><img src="./Img/oled_list06.jpg" alt=""></li>
+                <li class="blank_box">썸2</li>
+                <li class="item10"></li>
+                <li class="item11"><img src="./Img/oled_list03.jpg" alt=""></li>
+                <li class="item12"><img src="./Img/oled_list05.jpg" alt=""></li>
+                <li class="item3"><img src="./Img/oled_list02.jpg" alt=""></li>
+                <li class="blank_box"></li>
+                <li class="item11"><img src="./Img/oled_list04.jpg" alt=""></li>
+            </ul>
+        </div>
+        <div class="page_wrap">
+            <h3 class="sec_tit">썸네일 제목</h3>
+            <ul class="lst2">
+                <li class="item1"></li>
+                <li class="item2"></li>
+                <li class="item3"></li>
+                <li class="item4"></li>
+                <li class="item5"></li>
+                <li class="item6"></li>
+                <li class="item1"></li>
+                <li class="item2"></li>
+                <li class="item3"></li>
+            </ul>
+        </div>
+        <div class="page_wrap">
+            <h3 class="sec_tit">아이콘 리스트1</h3>
+            <ul class="lst3">
+                <li class="item4"><img src="./Img/icon01.png" alt=""></li>
+                <li class="item5"><img src="./Img/icon02.png" alt=""></li>
+                <li class="item6"><img src="./Img/icon03.png" alt=""></li>
+                <li class="item7"><img src="./Img/icon04.png" alt=""></li>
+                <li class="item8"><img src="./Img/icon05.png" alt=""></li>
+                <li class="item9"><img src="./Img/icon06.png" alt=""></li>
+            </ul>
+        </div>
+        <div class="page_wrap">
+            <h3 class="sec_tit">아이콘 리스트2</h3>
+            <ul class="lst4">
+                <li class="item1"></li>
+                <li class="item2"></li>
+                <li class="item3"></li>
+                <li class="item4"></li>
+                <li class="item5"></li>
+                <li class="item6"></li>
+            </ul>
+        </div>
+        <div class="page_wrap">
+            <h3 class="sec_tit">아이콘 리스트3</h3>
+            <ul class="lst5">
+                <li class="item1"></li>
+                <li class="item2"></li>
+                <li class="item3"></li>
+                <li class="item4"></li>
+                <li class="item5"></li>
+                <li class="item6"></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $(".sel").change(function(){
+                location.href = this.value;
+            });
+        });    
+    </script>
+    <script>
+        var sel = document.getElementsByClassName("sel"); 
+    
+        sel[0].addEventListener("change", function(){
+            location.href = sel[0].value;
+        });   
+        sel[1].addEventListener("change", function(){
+            location.href = sel[1].value;
+        });   
+        sel[2].addEventListener("change", function(){
+            location.href = sel[2].value;
+        });   
+        sel[3].addEventListener("change", function(){
+            location.href = sel[3].value;
+        });   
+        </script>
+        <footer id="ft">
+            <div class="ft_wrap">
+                <nav class="fnb">
+                    <ul>
+                        <li><a href="">개인정보처리방침</a></li>
+                        <li></li><a href="">이용약관</a></li>
+                        <li></li><a href="">채용공고</a></li>
+                        <li><a href="">전문영업인위촉</a></li>
+                    </ul>
+                </nav>
+                <nav class="snb">
+                    <ul>
+                        <li class="sns1">
+                            <a href="" title="페이스북"><i class="xi-facebook"></i></a>
+                        </li>
+                        <li class="sns2">
+                            <a href="" title="유튜브"><i class="xi-youtube-play"></i></a>
+                        </li>
+                        <li class="sns3">
+                            <a href="" title="네이버 포스트"><i class="xi-naver"></i></a>
+                        </li>
+                        <li class="sns3">
+                            <a href="" title="인스타그램"><i class="xi-instagram"></i></a>
+                        </li>
+                    </ul>
+                </nav>
+                <p class="copyright">Copyright © 2022 RENAULT KOREA MOTORS. ALL RIGHTS RESERVED</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
