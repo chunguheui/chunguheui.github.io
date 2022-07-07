@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 메타포 문서정보 -->
+
+    <!-- 파비콘 -->
+
+    <!-- 오픈그래프 -->
+
+    <!-- 폰트 -->
+
+    <!-- API 필수 플러그인 -->
+
+    <title>메인페이지</title>
+    <!-- 문서 초기화 스타일 -->
+    <link rel="stylesheet" href="reset.css">
+    <!-- 문서 공통 스타일 -->
+    <link rel="stylesheet" href="common.css">
+    <!-- 문서 로딩전 스크립트 -->
+    <script>
+
+    </script>
+    <!-- 해당 문서만의 스타일 -->
+    <style>
+    #vs { width: 100vw; clear:both; overflow-x:hidden; position:relative; }
+    .slide_box { width: 800%; }
+    .slide_box li { width: 12.5%;  float:left; }
+    .slide_box li a { display:block; }
+    .slide_box li a img { display:block; width: 100%; }
+    .button_box { width: 1400px; position:absolute; bottom:40px; left: 50%; 
+    margin-left: -700px; height: 5px;  }
+    .button_box li { float:left; }
+
+    #sec_wrap1 { background-color: #f6f6fa; padding-top: 50px; padding-bottom: 50px;  }
+    #sec1 .box1 { padding:30px 40px; height: 400px; box-sizing: border-box;  border:1px solid #1f75b0; 
+    padding-right: 20%; background-image: url("./data/bg_main3.jpg"); background-repeat: no-repeat;
+    background-color:#fff;  
+    background-position:right bottom; margin-right:5%; }
+    #sec1 .box2 { padding:30px 40px; height: 400px; box-sizing: border-box;  border:1px solid #ddd; } 
+
+    .sec_tit1 { margin: 10px 0px; font-size: 42px; color:#1f75b0; font-weight:700; 
+    letter-spacing:-2px; }
+    .sec_com1 { color:#333; font-size:20px; font-weight: 400; line-height: 1.3; }
+    .sec_linkbox { clear: both; position:relative; margin-top: 20px; margin-bottom: 20px; }
+    .sec_linkbox li.item { float:left; width:250px; }
+    .sec_linkbox li.item a { display:block; margin: 5px; background-color: #fff; border:1px solid #ddd;
+    color:#1f75b0; font-size: 20px; font-weight: 600; text-align:center; line-height: 80px; }
+    .sec_linkbox li.item a:hover { background-color:#1f75b0; color: #fff;}
+    .sec_linkbox li.circle_item { position:absolute; top:35px; left:190px; 
+    width: 117px; height: 117px; border-radius:60px; overflow:hidden; }
+    .sec_linkbox::after { content:""; clear:both; display:block; }
+
+    .box2 .sec_tit1 { text-align: center; padding-left: 50px; background-image: url("./data/icon_phone.png");
+    background-repeat: no-repeat; background-position:18px 8px; margin-top: 14px; }
+    .sec_table1 { display:table; }
+    .sec_table1 tr { display:table-row; }
+    .sec_table1 td { display:table-cell; padding-top:5px; padding-bottom:5px; border-bottom:1px solid #ddd; 
+        width: 345px; }
+    .sec_table1 tr:first-child td { border-top:1px solid #666;  }
+    .sec_table1 tr:last-child td { border-bottom:1px solid #666;  }
+    .sec_table1 td span { display:inline-block; line-height:30px; text-align:center; }
+    .sec_table1 td span.item_head { padding-left:38px; color:#1f75b0; font-weight:bold; font-size:16px; width: 90px; }
+    .sec_table1 td span.item_data { color:#333; font-weight:bold; font-size:16px; width: 120px; }
+    .sec_table1 tr:last-child td span.item_data { width:100%; line-height: 48px; }
+    .sec_table1 td .item_com { font-size:12px; text-align: center; }
+
+    #sec_wrap2 { padding-top: 50px; padding-bottom: 50px; background-color: #fff; }
+    #sec2 .box1 { position:relative; margin-right: 5%; height: 400px; border:1px solid #ddd; 
+    box-sizing:border-box; background-image: url("./data/bg_main2.jpg"); 
+    background-repeat: no-repeat; background-position:right top; padding: 40px; }
+    #sec2 .box1 .case { position:absolute; right:0; top:0; z-index:5; }
+    .sec_tit2 { padding-top:14px; padding-bottom: 28px; text-align: center; font-size: 36px; color:#333; }
+    .noti .sec_tit2 { text-indent:-340px; }
+
+    .sec_table2 { display:table; border-collapse: collapse; }
+    .sec_table2 tr { display:table-row; }
+    .sec_table2 td { display:table-cell; padding-top:5px; padding-bottom:5px; border-bottom:1px solid #ddd; 
+        width: 495px; }
+    .sec_table2 tr:first-child td { border-top:1px solid #666;  }
+    .sec_table2 tr:last-child td { border-bottom:1px solid #666;  }
+    .sec_table2 td span { display:block; line-height:40px; text-align:center; float:left; }
+    .sec_table2 td span.noti_tit { padding-left: 24px; }
+    .sec_table2 td span.noti_tit a { display:block; color:#333; }
+    .sec_table2 td span.noti_date { float:right; width: 110px; text-align: center; color:#999; }
+
+    .case { width: 318px; }
+    .case .sec_tit2 { padding-top: 50px; color:#fff; }
+    .case_lst { clear:both; width: 220px; margin:5px auto; }
+    .case_lst li { border-top:1px solid #fff; }
+    .case_lst li:last-child { border-bottom:1px solid #fff; }
+    .case_lst li a { color:#fff; display:block; line-height:52px; text-align: center; }
+
+    #sec2 .box2 { padding:30px 40px; height: 400px; box-sizing: border-box;  border:1px solid #ddd; } 
+    #sec2 .sec_tit2 { padding-bottom: 4px; }
+    #sec2 .sec_com2 { text-align: center; font-size:14px; line-height: 1.2; }
+    .sec_lst { clear:both; margin: 0 auto; width:360px; margin-top: 30px; } 
+    .sec_lst::after { content:""; clear:both; display:block; }
+    .sec_lst li { float:left; width: 50%; }
+    .sec_lst li a { display:block; line-height: 68px; text-align: center; 
+    padding-left:24px; border-right:1px solid #fff; border-bottom:1px solid #fff; 
+    color:#fff; background-color: #1f75b0; background-repeat: no-repeat;
+background-position:24px center; background-color: #f478b0; }
+    .sec_lst li a.traf_ico1 { background-image: url("./data/icon_bus.png");}
+    .sec_lst li a.traf_ico2 { background-image: url("./data/icon_bus.png");}
+    .sec_lst li a.traf_ico3 { background-image: url("./data/icon_parking.png");}
+    .sec_lst li a.traf_ico4 { background-image: url("./data/icon_map.png");}
+
+    #sec_wrap3 { padding-top: 50px; padding-bottom: 50px; background-color: #f6f6fa; 
+    border-top:1px solid #eee; }
+    /*.lst.info li a { display:block; height: 330px; overflow:hidden; 
+    border:1px solid #bbb; filter:blur(1px); transition-duration:0.6s; }
+    .lst.info li a:hover {  filter:blur(0px); }*/
+    .col_tit { color:#333; line-height:3.2; overflow:hidden; text-overflow: ellipsis;
+    white-space:nowrap; padding:0px 14px;  padding-top: 10px; }
+    .col_com { color:#666; line-height:3.4; padding:0px 14px; padding-top: 10px; }
+
+
+    .section {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.pageTitle {
+    padding: 40px 0 15px;
+    color: #000;
+    font-weight: 400;
+    font-size: 40px;
+}
+
+
+    .docInfo {
+    position: relative;
+    min-height: 500px;
+    margin-top: 70px;
+    /*padding-left: 400px;*/
+}
+    .docInfo .name b {
+    font-weight: 500;
+}
+
+.docInfo .name {
+    position: relative;
+    padding: 0 0 20px;
+    border-bottom: 2px solid #1f75b0;
+    font-size: 40px;
+    line-height: 1.2;
+    color: #000;
+}
+
+.docInfo .roll .tit {
+    position: absolute;
+    top: 18px;
+    left: 0;
+    color: #000;
+    font-weight: 500;
+}
+
+.docInfo .roll {
+    position: relative;
+    padding: 18px 20px 20px 90px;
+}
+
+.docInfo .roll + .roll {
+    border-top: 1px solid #ddd;
+}
+
+.docInfo table th, .docInfo td {
+    padding: 19px 12px;
+}
+
+.docInfo table th, .docInfo td {
+    padding: 19px 25px;
+}
+
+.tableType1 th {
+    background: #f8f8f8;
+    color: #000;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.tableType1 th, .tableType1 td {
+    border: 1px solid #ddd;
+    padding: 30px;
+}
+
+
+.tabMenu {
+    max-width: 1120px;
+    margin: 0 auto 40px;
+}
+
+.tabMenu .tabItem8 li {
+    width: 12.5%;
+}
+.tabMenu li {
+    float: left;
+}
+
+.tabMenu li.active a span, .tabMenu li.active button span {
+    background: #1f75b0;
+    border-color: #1f75b0;
+    color: #fff;
+    z-index: 2;
+}
+.tabMenu li a span, .tabMenu li button span {
+    font-size: 16px;
+    letter-spacing: -0.9px;
+}
+.tabMenu li a span, .tabMenu li button span {
+    position: relative;
+    display: block;
+    margin: 0 0 0 -1px;
+    padding: 15px 0;
+    background: #f6f6fa;
+    border: 1px solid #ddd;
+    color: #999;
+    font-size: 16px;
+    text-align: center;
+}
+.docInfo .btns button span:before, .docInfo .btns button span:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    width: 16px;
+    height: 2px;
+    background: #aaa;
+}
+    </style>
+</head>
+<body>
+<!-- DOM 구조 설계 : 스토리보드에 직접 태그 구조를 설계를 메인 화면과 서브 화면으로 나누어 구성 -->
+<div class="container">
+    <header id="hd" class="header">
+        <div class="hd_wrap top">
+            <nav id="tnb" class="nav">
+                <a href="" class="logo"><img src="./data/img_logo.png" alt="서울대학교어린이병원로고"></a>
+                <ul class="right_con top_nav">
+                    <li><a href="" class="login">로그인</a></li>
+                    <li><a href="" class="join">회원가입</a></li>
+                    <li><a href="" class="mypage">마이페이지</a></li>
+                    <li><a href="" class="logout">로그아웃</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="hd_wrap main">
+            <nav id="gnb" class="nav">
+                <ul class="left_con">
+                    <li>
+                        <a href="" class="dp1">진료예약</a>
+                        <ul class="sub">
+                            <li><a href="" class="dp2">인터넷진료예약</a></li>
+                            <li><a href="" class="dp2">예약확인/취소</a></li>
+                            <li><a href="" class="dp2">희귀질환상담</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="dp1">진료안내</a>
+                        <ul class="sub">
+                            <li><a href="" class="dp2">입/퇴원안내</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="dp1">이용안내</a>
+                        <ul class="sub">
+                            <li><a href="" class="dp2">꿈틀꽃씨</a></li>
+                            <li><a href="" class="dp2">문병안내</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="dp1">고객참여</a>
+                        <ul class="sub">
+                            <li><a href="" class="dp2">어린이병원후원회</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="dp1">병원소개</a>
+                        <ul class="sub">
+                            <li><a href="" class="dp2">어린이병원학교</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <article id="con" class="section">
+        <div class="pageHead">
+			<h3 class="pageTitle">의료진 소개</h3>
+			<!--
+                <p class="location">
+				<a href="/" class="home">HOME</a>
+				<span>병원소개</span>
+				<strong>의료진 소개</strong>
+                </p>
+            -->
+		</div>
+
+        <div class="tabMenu">
+            <!--<button type="button" class="tabBtn" onclick="tabOpen(this);">전체보기</button>-->
+            <ul class="tabItem8">
+                <li class="active"><a href="?"><span>전체보기</span></a></li>
+                <li><a href="?dr_clinic=A"><span>코 센터</span></a></li>
+                <li><a href="?dr_clinic=B"><span>목 센터</span></a></li>
+                <li><a href="?dr_clinic=C"><span>귀 센터</span></a></li>
+                <li><a href="?dr_clinic=E"><span>코골이 클리닉</span></a></li>
+                <li><a href="?dr_clinic=F"><span>코로나 회복 클리닉</span></a></li>
+                <li><a href="?dr_clinic=D"><span>내과</span></a></li>
+                <li><a href="?dr_clinic=H"><span>신경과</span></a></li>
+            </ul>
+        </div>
+
+        <div class="docInfo" id="dr24">
+
+            <div class="pic"><img src="http://www.hanaent.co.kr/common/doctor/15664541244468.jpg" alt="동헌종"></div>
+
+            <div class="info">
+                <p class="name">
+                    <b>동헌종</b>
+                    <span class="pos">원장</span>
+                    <span class="spec">이비인후과 전문의</span>
+                </p>
+                <p class="roll">
+                    <b class="tit">진료과</b>
+                    코 센터						</p>
+                <p class="roll">
+                    <b class="tit">전문분야</b>
+                    축농증 내시경수술, 알레르기비염, 비중격만곡증						</p>
+            </div>
+
+                                <div class="tableType1">
+                <table>
+                    <caption>주간 진료 시간표</caption>
+                    <colgroup>
+                        <col style="width:10%;">
+                        <col style="width:10%;">
+                        <col style="width:10%;">
+                        <col style="width:10%;">
+                        <col style="width:10%;">
+                        <col style="width:10%;">
+                        <col style="width:10%;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">시간</th>
+                            <th scope="col">월</th>
+                            <th scope="col">화</th>
+                            <th scope="col">수</th>
+                            <th scope="col">목</th>
+                            <th scope="col">금</th>
+                            <th scope="col">토</th>
+                        </tr>
+                    </thead>
+                    <tbody class="center">
+                        <tr>
+                            <th scope="row">오전</th>
+                            <td><span class="type01">진료</span></td>
+                            <td><span class="type01">진료</span></td>
+                            <td></td>
+                            <td><span class="type01">진료</span></td>
+                            <td><span class="type01">진료</span></td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">오후</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>-</td>
+                        </tr>
+                        <!--tr>
+                            <th scope="row">야간</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr-->
+                        <tr>
+                            <th scope="row">비고</th>
+                            <td colspan="6" class="left">※ 휴진 : 7/1(금), 8/8(월) ~ 8/13(토)<br>
+※ 매주 토요일 휴진<br>
+※ 동헌종 원장 진료는 예약제로 진행되며, 당일예약/접수가 어려운 점 알려드립니다.<br>
+※ 응급 수술 등에 의해 진료시간이 변경될 수 있으니 예약 및 내원 시 확인바랍니다.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+                                <div class="btns">
+                <span class="btnReserv"><a href="/info/info05.html">온라인예약</a></span>
+                <button type="button" class="btnTab" onclick="historyView(this, 0);"><span>주요경력</span></button>
+                <button type="button" class="btnTab" onclick="historyView(this, 1);"><span>논문&amp;연구실적</span></button>
+            </div>
+
+            <div class="btnCont">
+                <div class="cont" style="display: none;">
+                    <ul>
+                        <li>서울대학교 의과대학 의학박사<br>
+</li><li>서울대병원 이비인후과 전공의<br>
+</li><li>서울대병원 이비인후과 전임의<br>
+</li><li>보라매병원 이비인후과 과장 <br>
+</li><li>University of Pennsylvania Hospital : fellow<br>
+</li><li>삼성서울병원 전문의<br>
+</li><li>성균관대학교 의과대학 부교수<br>
+</li><li>Cleveland Clinic : visiting scholar<br>
+</li><li>성균관대학교 의과대학 교수<br>
+</li><li>성균관대학교의과대학 이비인후과학 주임교수<br>
+</li><li>삼성서울병원 이비인후과 과장<br>
+</li><li>삼성서울병원 환자행복추진실장<br>
+</li><li>삼성서울병원 진료부원장<br>
+</li><li>대한비과학회 회장<br>
+</li><li>대한천식알레르기학회회장<br>
+</li><li>International Congress of ORL-HNS 학술대회장<br>
+</li><li>대한안면성형재건학회 회장<br>
+</li><li>EBS 명의 2회 출연(비염과축농증, 코질환 전문의 동헌종 교수)<br>
+</li><li>이비인후과학회 : 기획이사, 간행이사<br>
+</li><li>대한비과학회 : 간행이사, 국제이사<br>
+</li><li>대한천식알레르기학회 : 의무이사, 법제이사							</li></ul>
+                </div>
+                <div class="cont" style="display: none;">
+                    <ul>
+                        <li>Sleep Breath. 2017 May;21(2):535-541. doi: 10.1007/s11325-016-1413-1. Epub 2016 Oct 5. Impact of gender and sleep position on relationships between anthropometric parameters and obstructive sleep apnea syndrome / Jeong JI11, Gu S2, Cho J3, Hong SD4, Kim SJ4, Dhong HJ4, Chung SK4, Kim HY5.<br>
+</li><li>Rhinology. 2016 Dec 1;54(4):336-341. doi: 10.4193/Rhin15.186. Clinical implications of serum galactomannan measurement in patients with acute invasive fungal rhinosinusitis / Cho HJ11, Hong SD2, Kim HY2, Chung SK2, Dhong HJ2.<br>
+</li><li>Clin Exp Otorhinolaryngol. 2016 Dec;9(4):346-351. Epub 2016 Jun 18. Upper Airway Variation and Frequent Alcohol Consumption Can Affect Compliance With Continuous Positive Airway Pressure / Jeong JI11, Kim HY2, Hong SD2, Ryu G2, Kim SJ2, Lee KE2, Dhong HJ2, Chung SK2.<br>
+</li><li>Lancet. 2016 Sep 3;388(10048):994-1001. doi: 10.1016/S0140-6736(16)30623-7. Epub 2016 Jul 9.MERS-CoV outbreak following a single patient exposure in an emergency room in South Korea: an epidemiological outbreak study / Cho SY11, Kang JM2, Ha YE1, Park GE1, Lee JY1, Ko JH1, Lee JY1, Kim JM2, Kang CI1, Jo IJ3, Ryu JG4, Choi JR4, Kim S5, Huh HJ6, Ki CS6, Kang ES6, Peck KR1, Dhong HJ7, Song JH1, Chung DR8, Kim YJ9.<br>
+</li><li>World Neurosurg. 2016 Sep;93:164-7. doi: 10.1016/j.wneu.2016.06.006. Epub 2016 Jun 11. Nasoseptal Flap Elevation in Patients with History of Septal Surgery: Does It Increase Flap Failure or Cerebrospinal Fluid Leakage? / Park W11, Hong SD2, Nam DH3, Kong DS3, Ryu G1, Kim HY1, Chung SK1, Dhong HJ1.<br>
+</li><li>Diagn Interv Radiol. 2016 Jul-Aug;22(4):347-53. doi: 10.5152/dir.2015.15417. Extrasinonasal infiltrative process associated with a sinonasal fungus ball: does it mean invasive fungal sinusitis? / Kim YK11, Kim HJ, Kim HY, Cha J, Lee JY, Chung SK, Dhong HJ, Song M, Kim ST.<br>
+</li><li>Am J Rhinol Allergy. 2016 Jul;30(4):134-8. doi: 10.2500/ajra.2016.30.4334.Temporal differences in improvement of nasal obstruction between primary and revision septoplasty / Jeong JI11, Hong SD, Kim SJ, Dhong HJ, Chung SK, Kim HY.<br>
+</li><li>World Neurosurg. 2016 Mar;87:162-9. doi: 10.1016/j.wneu.2015.12.050. Epub 2015 Dec 28. Endoscopic Modified Transseptal Transsphenoidal Approach for Maximal Preservation of Sinonasal Quality of Life and Olfaction / Hong SD11, Nam DH2, Kong DS3, Kim HY1, Chung SK1, Dhong HJ4.<br>
+</li><li>Int Forum Allergy Rhinol. 2016 Feb;6 Suppl 1:S22-209. doi: 10.1002/alr.21695. International Consensus Statement on Allergy and Rhinology: Rhinosinusitis Orlandi RR11, Kingdom TT2, Hwang PH3, Smith TL4, Alt JA1, Baroody FM5, Batra PS6, Bernal-Sprekelsen M7, Bhattacharyya N8, Chandra RK9, Chiu A10, Citardi MJ11, Cohen NA12, DelGaudio J13, Desrosiers M14, Dhong HJ15, Douglas R16, Ferguson B17, Fokkens WJ18, Georgalas C19, Goldberg A20, Gosepath J21, Hamilos DL22, Han JK23, Harvey R24, Hellings P25, Hopkins C26, Jankowski R27, Javer AR28, Kern R29, Kountakis S30, Kowalski ML31, Lane A32, Lanza DC33, Lebowitz R34, Lee HM35, Lin SY32, Lund V36, Luong A11, Mann W37, Marple BF38, McMains KC39, Metson R8, Naclerio R5, Nayak JV3, Otori N40, Palmer JN12, Parikh SR41, Passali D42, Peters A29, Piccirillo J43, Poetker DM44, Psaltis AJ45, Ramadan HH46, Ramakrishnan VR2, Riechelmann H47, Roh HJ48, Rudmik L49, Sacks R50, Schlosser RJ51, Senior BA52, Sindwani R53, Stankiewicz JA54, Stewart M55, Tan BK29, Toskala E56, Voegels R57, Wang de Y58, Weitzel EK59, Wise S13, Woodworth BA60, Wormald PJ45, Wright ED61, Zhou B62, Kennedy DW1-Int Forum Allergy Rhinol. 2015 Oct;5(10):960-6. doi: 10.1002/alr.21564. Epub 2015 Jun 3. Nasal endoscopic evaluation and its impact on survival in patients with stage I/II extranodal natural killer/T-cell lymphoma, nasal type / Cho HJ11, Jang MS2, Hong SD2, Kim SJ3, Ahn YC4, Oh D4, Ko YH5, Kim HY2, Dhong HJ2, Chung SK2, Kim WS3.<br>
+</li><li>Int Forum Allergy Rhinol. 2015 Oct;5(10):950-9. doi: 10.1002/alr.21558. Epub 2015 Jun 2. Treatment outcomes of sinonasal malignant melanoma: a Korean multicenter study / Won TB11, Choi KY2, Rhee CS3, Jin HR4, Yi JS5, Dhong HJ6, Kim SW7, Choi JH8, Kim JK9, Chung YJ10, Kim YM11, Kim SW12, Kim JS13, Kwon SH14, Lim SC15, Roh HJ16.<br>
+</li><li>Int Forum Allergy Rhinol. 2015 Jul;5(7):616-21. doi: 10.1002/alr.21508. Epub 2015 May 1. Predictive factors of subjective outcomes after septoplasty with and without turbinoplasty: can individual perceptual differences of the air passage be a main factor / Hong SD11, Lee NJ1, Cho HJ1, Jang MS1, Jung TY1, Kim HY1, Chung SK1, Dhong HJ1.<br>
+</li><li>Eur Arch Otorhinolaryngol. 2015 Jun;272(6):1437-42. doi: 10.1007/s00405-014-3239-4. Epub 2014 Aug 10. Effect of uvulopalatopharyngoplasty on CPAP compliance / Hong SD11, Kim HY, Cho HJ, Jang MS, Dhong HJ, Chung SK.<br>
+</li><li>Am J Rhinol Allergy. 2015 May-Jun;29(3):e81-6. doi: 10.2500/ajra.2015.29.4193. Role of Wnt signaling pathway in progression of sinonasal inverted papilloma to squamous cell carcinoma / Jung YG11, Lee HW, Kim MG, Dhong HJ, Cho KS, Roh HJ.<br>
+</li><li>Am J Rhinol Allergy. 2015 May-Jun;29(3):221-5. doi: 10.2500/ajra.2015.29.4165. Endoscopic binostril versus transnasal transseptal microscopic pituitary surgery: Sinonasal quality of life and olfactory function / Hong SD11, Nam do H, Seol HJ, Choi NY, Kim HY, Chung SK, Dhong HJ.<br>
+</li><li>Eur Arch Otorhinolaryngol. 2015 Apr;272(4):897-903. doi: 10.1007/s00405-014-3188-y. Epub 2014 Jul 6. Sinonasal evaluation and treatment before liver transplantation: a retrospective review of 982 patients / Hong SD11, Jang MS, Cho HJ, Kim HY, Dhong HJ, Chung SK, Joh JW.<br>
+</li><li>Clin Exp Otorhinolaryngol. 2015 Mar;8(1):82. doi: 10.3342/ceo.2015.8.1.82. Epub 2015 Feb 3. In Reply: Bringing Retracted Papers Into Focus / Kim JH11, Seo MY2, Hong SD2, Lee J2, Chung SK2, Kim HY2, Dhong HJ2.<br>
+</li><li>Allergy Asthma Immunol Res. 2015 Mar;7(2):158-66. doi: 10.4168/aair.2015.7.2.158. Epub 2014 Dec 18. Comparison of Intranasal Ciclesonide, Oral Levocetirizine, and Combination Treatment for Allergic Rhinitis / Kim CH11, Kim JK2, Kim HJ3, Cho JH4, Kim JS5, Kim YD6, Lee HM7, Kim SW8, Cho KS9, Lee SH7, Rhee CS10, Dhong HJ11, Rha KS12, Yoon JH1.<br>
+</li><li>J Plast Reconstr Aesthet Surg. 2015 Mar;68(3):344-50. doi: 10.1016/j.bjps.2014.10.037. Epub 2014 Oct 30. An analysis of Asian midfacial fat thickness according to age group using computed tomography / Jang MS11, Kim HY2, Dhong HJ1, Chung SK1, Hong SD1, Cho HJ1.<br>
+</li><li>Am J Rhinol Allergy. 2015 Jan-Feb;29(1):48-53. doi: 10.2500/ajra.2015.29.4115. Prognostic factors for survival in patients with acute invasive fungal rhinosinusitis / Cho HJ11, Jang MS, Hong SD, Chung SK, Kim HY, Dhong HJ.<br>
+</li><li>Am J Respir Crit Care Med. 2014 Dec 1;190(11):1318-21. doi: 10.1164/rccm.201408-1498LE. Effect of Parapharyngeal Fat on Dynamic Obstruction of the Upper Airway in Patients with Obstructive Sleep Apnea / Jang MS11, Kim HY, Dhong HJ, Chung SK, Hong SD, Cho HJ, Jung TY.<br>
+</li><li>Am J Rhinol Allergy. 2014 Nov-Dec;28(6):517-9. doi: 10.2500/ajra.2014.28.4109. Olfactory outcomes after endoscopic pituitary surgery with nasoseptal "rescue" flaps: Electrocautery versus cold knife / Hong SD11, Nam DH, Park J, Kim HY, Chung SK, Dhong HJ.<br>
+</li><li>Clin Exp Otorhinolaryngol. 2014 Sep;7(3):193-7. doi: 10.3342/ceo.2014.7.3.193. Epub 2014 Aug 1. Hematoxylin and Eosin Staining for Detecting Biofilms: Practical and Cost-Effective Methods for Predicting Worse Outcomes After Endoscopic Sinus Surgery / Hong SD11, Dhong HJ1, Chung SK1, Kim HY1, Park J1, Ha SY2.<br>
+</li><li>Rhinology. 2014 Sep;52(3):238-45. doi: 10.4193/Rhin13.131. Extraocular muscle injury during endoscopic sinus surgery: A series of 10 cases at a single center / Sohn JH1, Hong SD, Kim JH, Dhong HJ, Chung SK, Kim HY, Oh SY.<br>
+</li><li>Clin Exp Otorhinolaryngol. 2014 Jun;7(2):102-5. doi: 10.3342/ceo.2014.7.2.102. Epub 2014 May 21. The Efficacy of Preemptive Analgesia With Pregabalin in Septoplasty / Kim JH11, Seo MY2, Hong SD2, Lee J2, Chung SK2, Kim HY2, Dhong HJ2.<br>
+</li><li>Clin Exp Otorhinolaryngol. 2014 Jun;7(2):145-8. doi: 10.3342/ceo.2014.7.2.145. Epub 2014 May 21. Sinonasal Glomangiopericytoma Causing Oncogenic Osteomalacia / Lee GG11, Dhong HJ1, Park YS2, Ko YH3.<br>
+</li><li>Auris Nasus Larynx. 2014 Feb;41(1):46-9. doi: 10.1016/j.anl.2013.07.008. Epub 2013 Aug 8. Compliance and efficacy of saline irrigation in pediatric chronic rhinosinusitis / Hong SD11, Kim JH2, Kim HY3, Jang MS1, Dhong HJ1, Chung SK1.<br>
+</li><li>Clin Exp Otorhinolaryngol. 2013 Dec;6(4):226-30. doi: 10.3342/ceo.2013.6.4.226. Epub 2013 Nov 29. Nasal Obstruction and Palate-Tongue Position on Sleep-Disordered Breathing / Kim HY11, Jeong JI1, Dhong HJ1, Sohn JH1, Hong SD1, Kim JH1, Jang SY1, Jung YG1, Chung SK1.<br>
+</li><li>Am J Rhinol Allergy. 2013 Sep-Oct;27(5):407-10. doi: 10.2500/ajra.2013.27.3924. Systemic effects and safety of triamcinolone-impregnated nasal packing after endoscopic sinus surgery: A randomized, double-blinded, placebo-controlled study / Hong SD11, Kim JH, Dhong HJ, Kim HY, Chung SK, Chang YS, Sohn JH.<br>
+</li><li>Rhinology. 2013 Sep;51(3):275-9. doi: 10.4193/Rhino12.001. Evaluation of inferior turbinate outfracture outcomes using computed tomography / Min JY11, Dhong HJ, Cho HJ, Chung SK, Kim HY.<br>
+</li><li>Am J Rhinol Allergy. 2013 Sep-Oct;27(5):e135-9. doi: 10.2500/ajra.2013.27.3937. Prevalence of ocular symptoms in patients with allergic rhinitis: Korean multicenter study / Lee JE11, Kim KR, Rha KS, Dhong HJ, Roh HJ, Rhee CS, Kim KS, Park DJ, Kim SW, Kim YD, Lim SC, Ahn BH, Kang JM, Lee JH, Kim CH, Kim SH, Kim HJ, Lee KH, Cho KS, Jung YH, Lee TH, Shim WS, Kim EJ, Park JS, Lee YS, Kim DY.<br>
+</li><li>Allergy Asthma Immunol Res. 2013 Mar;5(2):65-7. doi: 10.4168/aair.2013.5.2.65. Epub 2013 Feb 12. Classification of Allergic Rhinitis: What is Most Suitable in Korea / 1,Dhong HJ1.<br>
+</li><li>Am J Rhinol Allergy. 2012 Nov-Dec;26(6):421-7. doi: 10.2500/ajra.2012.26.3823. A time course study on the development of allergen-induced nasal airway remodeling in a rat model / Chung YJ11, Kim HY, Chung SK, Dhong HJ.<br>
+</li><li>Am J Rhinol Allergy. 2012 Sep-Oct;26(5):e137-41. doi: 10.2500/ajra.2012.26.3801. Ultrasonographic monitoring of new expanded polytetrafluoroethylene implant thickness after augmentation rhinoplasty / Jung YG11, Kim KH, Dhong HJ.<br>
+</li><li>Acta Otolaryngol. 2012 Jun;132 Suppl 1:S32-6. doi: 10.3109/00016489.2012.664284. Clinical implications of rhinosinusitis detected by preoperative computed tomography for endoscopic endonasal transsphenoidal pituitary surgery / Min JY11, Chung SK, Kim HY, Kong DS, Dhong HJ.<br>
+</li><li>Am J Rhinol Allergy. 2012 Mar-Apr;26(2):e81-4. doi: 10.2500/ajra.2012.26.3719. Effects of statins on the recovery of olfactory function in a 3-methylindole-induced anosmia mouse model / Kim HY11, Kim JH, Dhong HJ, Kim KR, Chung SK, Chung SC, Kang JM, Jung YG, Jang SY, Hong SD.<br>
+</li><li>Allergy Asthma Immunol Res. 2012 Jan;4(1):2-4. doi: 10.4168/aair.2012.4.1.2. Epub 2011 Dec 12. Angiogenic Factors Play a Significant Role in Nasal Airway Remodeling in Allergic Rhinitis / 1,Dhong HJ1.<br>
+</li><li>J Int Med Res. 2011;39(6):2209-16. Predictive Capabilities of Serum Eosinophil Cationic Protein, Percentage of Eosinophils and Total Immunoglobulin E in Allergic Rhinitis without Bronchial Asthma / Jung YG11, Kim KH, Kim HY, Dhong HJ, Chung SK.<br>
+</li><li>Am J Rhinol Allergy. 2011 Sep-Oct;25 Suppl 1:S3-15. doi: 10.2500/ajra.2011.25.3674. Nasal allergies in the Asian-Pacific population: Results from the Allergies in Asia-Pacific Survey / Katelaris CH11, Lai CK, Rhee CS, Lee SH, Yun WD, Lim-Varona L, Quang VT, Hwang J, Singh H, Kim J, Boyle JM, Dhong HJ, Narayanan P, Vicente G, Blaiss M, Sacks R.<br>
+</li><li>Auris Nasus Larynx. 2011 Apr;38(2):228-32. doi: 10.1016/j.anl.2010.07.005. Epub 2010 Aug 30. Sleep quality and effects of position on sleep apnea in East Asian children / Kim HY11, Dhong HJ, Lee JK, Chung SK, Jung SC.<br>
+</li><li>Am J Rhinol Allergy. 2010 May-Jun;24(3):226-9. doi: 10.2500/ajra.2010.24.3459. Comparison of the skin-prick test and Phadia ImmunoCAP as tools to diagnose house-dust mite allergy / Jung YG11, Cho HJ, Park GY, Min JY, Kim HY, Dhong HJ, Chung SK, Kim SW.<br>
+</li><li>Am J Rhinol Allergy. 2010 Mar-Apr;24(2):121-5. doi: 10.2500/ajra.2010.24.3455. Effects of statins on regeneration of olfactory epithelium / Kim HY11, Dhong HJ, Min JY, Jung YG, Chung SK.<br>
+</li><li>Rhinology. 2009 Mar;47(1):79-84. Postoperative maxillary sinus mucocoele: risk factors for restenosis after surgery and preventive effects of mytomycin-C / Kim HY11, Dhong HJ, Min JY, Jung YG, Park SH, Chung SK.<br>
+</li><li>Am J Rhinol Allergy. 2009 Jan-Feb;23(1):105-10. doi: 10.2500/ajra.2009.23.3273. Ultrasonographic monitoring of implant thickness after augmentation rhinoplasty with expanded polytetrafluoroethylene / Jung YG11, Kim HY, Dhong HJ, Park KN, Lee HJ, Lim YJ, Min JY.<br>
+</li><li>Otolaryngol Head Neck Surg. 2008 Mar;138(3):289-93. doi: 10.1016/j.otohns.2007.09.019. The correlation between pharyngeal narrowing and the severity of sleep-disordered breathing / Kim HY11, Bok KH, Dhong HJ, Chung SK.<br>
+</li><li>Int J Pediatr Otorhinolaryngol. 2008 Jan;72(1):103-8. Epub 2007 Nov 26. Changes of maxillary sinus volume and bony thickness of the paranasal sinuses in longstanding pediatric chronic rhinosinusitis  / Kim HY11, Kim MB, Dhong HJ, Jung YG, Min JY, Chung SK, Lee HJ, Chung SC, Ryu NG.<br>
+</li><li>Mov Disord. 2007 Aug 15;22(11):1563-6. Analysis of olfactory function and the depth of olfactory sulcus in patients with Parkinson's disease / Kim JY11, Lee WY, Chung EJ, Dhong HJ.<br>
+</li><li>Am J Rhinol. 2007 Jul-Aug;21(4):408-11. Paradoxical nasal obstruction: Analysis of characteristics using acoustic rhinometry / Kim HY11, Dhong HJ, Hong SD, Lee HJ, Cho HJ, Chung SK.<br>
+</li><li>Otolaryngol Head Neck Surg. 2007 Mar;136(3):390-5. Intranasal Helicobacter pylori colonization does not correlate with the severity of chronic rhinosinusitis / Kim HY11, Dhong HJ, Chung SK, Chung KW, Chung YJ, Jang KT.<br>
+</li><li>Ann Otol Rhinol Laryngol. 2007 Jan;116(1):76-80. Effects of corticosteroids on expression of interleukin-18 in the airway mucosa of a mouse model of allergic rhinitis / Kim SW11, Jeon YK, Won TB, Dhong HJ, Min JY, Shim WS, Min YG.<br>
+</li><li>Prevalence of lower airway diseases in patients with chronic rhinosinusitis<br>
+</li><li>Auris Nasus Larynx. 2006 Dec;33(4):403-8. Epub 2006 Aug 22. Clinical characteristics of chronic rhinosinusitis with asthma / Kim HY11, Dhong HJ, Chung SK, Chung YJ, Kim MG.<br>
+</li><li>Acta Otolaryngol. 2006 Sep;126(9):941-7. Effects of staphylococcal enterotoxin on ciliary activity and histology of the sinus mucosa / Min YG11, Oh SJ, Won TB, Kim YM, Shim WS, Rhee CS, Min JY, Dhong HJ.<br>
+</li><li>Am J Rhinol. 2006 Sep-Oct;20(5):450-2. Computed tomographic assessment of chronic rhinosinusitis with asthma / Dhong HJ11, Kim HY, Chung YJ, Kim TW, Kim JH, Chung SK, Kim MG.<br>
+</li><li>Otolaryngol Head Neck Surg. 2006 Jul;135(1):94-9. Hyperostosis may affect prognosis after primary endoscopic sinus surgery for chronic rhinosinusitis / Kim HY11, Dhong HJ, Lee HJ, Chung YJ, Yim YJ, Oh JW, Chung SK, Kim HJ.<br>
+</li><li>Int J Pediatr Otorhinolaryngol. 2005 Nov;69(11):1535-9. Epub 2005 Jul 5. Prognostic factors of pediatric endoscopic sinus surgery / Kim HY11, Dhong HJ, Chung SK, Chung YJ, Min JY.<br>
+</li><li>Acta Otolaryngol. 2005 Feb;125(2):169-76. Histopathologic characteristics of chronic sinusitis with bronchial asthma / Dhong HJ11, Kim HY, Cho DY.<br>
+</li><li>Laryngoscope. 2003 Dec;113(12):2157-62. Pathogenetic mechanism of olfactory cell injury after exposure to sulfur dioxide in mice / Min YG11, Kim JW, Hong SC, Dhong HJ, Jarin PR, Jin Y.<br>
+</li><li>Otolaryngol Head Neck Surg. 2003 Jul;129(1):24-32. Histologic changes to olfactory epithelium in hypothyroid rats / Dhong HJ11, Kim HY, Ha BS.<br>
+</li><li>Clin Otolaryngol Allied Sci. 2001 Aug;26(4):329-33. Rhinosinusitis in transplant patients / Dhong HJ11, Lee JC, Ryu JS, Cho DY.<br>
+</li><li>Otolaryngol Head Neck Surg. 2001 Jan;124(1):99-104. Effect of endoscopic sinus surgery on asthmatic patients with chronic rhinosinusitis / Dhong HJ11, Jung YS, Chung SK, Choi DC.<br>
+</li><li>Am J Rhinol. 2000 Jul-Aug;14(4):227-31. Diagnostic accuracy in sinus fungus balls: CT scan and operative findings / Dhong HJ11, Jung JY, Park JH.<br>
+</li><li>Brain Res. 1999 Apr 10;824(2):312-5. Estrogen protects against 3-methylindole-induced olfactory loss / Dhong HJ11, Chung SK, Doty RL.							</li></ul>
+                </div>
+            </div>
+
+        </div>
+    </article>
+    <footer id="ft" class="footer">
+        <div class="ft_wrap sub1">
+            <nav class="ft_nav sns_link">
+                <ul>
+                    <li><strong>서울대학교어린이병원 SNS</strong></li>
+                    <li class="item1"><a href="">푸터메뉴</a></li>
+                    <li class="item2"><a href="">푸터메뉴</a></li>
+                    <li class="item3"><a href="">푸터메뉴</a></li>
+                    <li class="item4"><a href="">푸터메뉴</a></li>
+                    <li class="item5"><a href="">푸터메뉴</a></li>
+                    <li class="item6"><a href="">푸터메뉴</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="ft_wrap sub2">
+            <nav class="ft_nav ft_link">
+                <ul class="left_con">
+                    <li class="nav_txt"><a href="">이용약관</a></li>
+                    <li class="nav_txt"><a href="">개인정보처리방침</a></li>
+                    <li class="nav_txt"><a href="">환자의 권리와 의무</a></li>
+                    <li class="nav_txt"><a href="">비급여안내</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="ft_wrap sub3">
+            <div class="copyright_box">
+                <h4 class="ft_company">서울대학교어린이병원</h4>
+                <p class="ft_addr">
+                    <span>주소 : 03080 서울특별시 종로구 대학로 101(연건동 28)대표전화 : 1588-5700 서울대학교어린이병원</span><br>
+                </p> 
+                <p class="copyright">COPYRIGHT&copy; 2015 HANA ENT HOSPITAL. ALL RIGHT RESERVED.</p>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
